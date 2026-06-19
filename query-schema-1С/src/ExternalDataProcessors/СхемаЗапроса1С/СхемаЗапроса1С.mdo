@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:ExternalDataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="e0288254-9cb5-4181-a05d-7b8650ce6cac">
+  <producedTypes>
+    <objectType typeId="61d88124-da98-4006-9514-799436ae3ab7" valueTypeId="0cff481e-4285-4792-af33-69ef7a5d5993"/>
+  </producedTypes>
+  <name>СхемаЗапроса1С</name>
+  <synonym>
+    <key>ru</key>
+    <value>Схема запроса 1С</value>
+  </synonym>
+  <comment>Визуализация схемы запроса.</comment>
+  <containedObjects classId="c3831ec8-d8d5-4f93-8a22-f9bfae07327f" objectId="a8b814a7-7b7b-443b-a31d-08d68cd01a90"/>
+  <defaultForm>ExternalDataProcessor.СхемаЗапроса1С.Form.ОсновнаяФорма</defaultForm>
+  <attributes uuid="1038bc3b-3075-4936-8e6a-d4f009ea6895">
+    <name>КомпактныйРежим</name>
+    <synonym>
+      <key>ru</key>
+      <value>Компактный режим</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="9fb4e3ad-dd8b-465c-8d22-0ceb3dd475fd">
+    <name>ПрямыеСтрелки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Прямые стрелки</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="6b6cc662-a817-411e-9a47-6d9f1d22135c">
+    <name>РасположитьСЛевоНаПраво</name>
+    <synonym>
+      <key>ru</key>
+      <value>Расположить с лево на право</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="a02cfc27-cb1f-49f5-89ef-8f8ab686d3e5">
+    <name>ВыводитьУсловияСоединения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Выводить условия соединения</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="9c07d9ee-c436-4a5d-973f-879945cda91c">
+    <name>НаправлениеПостроения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Направление построения</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <format>
+      <key>ru</key>
+      <value>БЛ='Узлы по-вертикали, пакеты по-горизонтали'; БИ='Пакеты по-вертикали, узлы по-горизонтали'</value>
+    </format>
+    <editFormat>
+      <key>ru</key>
+      <value>БЛ='Узлы по-вертикали, пакеты по-горизонтали'; БИ='Пакеты по-вертикали, узлы по-горизонтали'</value>
+    </editFormat>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="6a748c71-25f6-47a4-8771-932113eea491">
+    <name>БлокировкаПоВертикали</name>
+    <synonym>
+      <key>ru</key>
+      <value>Блокировка по вертикали</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="29fc6f6e-b31f-4093-98b8-f528a13bd7ef">
+    <name>БлокировкаПоГоризонтали</name>
+    <synonym>
+      <key>ru</key>
+      <value>Блокировка по горизонтали</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="cc077b52-b8d8-4d08-ac35-ea804bd966a5">
+    <name>СдвигПакета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сдвиг пакета</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="430caf9d-1215-4945-a88f-e2160686fbf7">
+    <name>СдвигУзла</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сдвиг узла</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="55532ce4-27a4-42e1-965f-654d7c24354b">
+    <name>Физика</name>
+    <synonym>
+      <key>ru</key>
+      <value>Физика</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="fb49175f-eff4-424c-945d-e18128e0b92d">
+    <name>Стабилизация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Стабилизация</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="7cedef69-5ee4-4dd6-920f-9896473035b8">
+    <name>ПлавныеРебра</name>
+    <synonym>
+      <key>ru</key>
+      <value>Плавные ребра</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="558427a6-dfdb-4a59-8090-0234f546d052">
+    <name>Кластеризовать</name>
+    <synonym>
+      <key>ru</key>
+      <value>Кластеризовать</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="042da894-3697-4a6e-93fa-cfdf636d2714">
+    <name>МасштабироватьПриРаскрытииКластера</name>
+    <synonym>
+      <key>ru</key>
+      <value>Масштабировать при раскрытии кластера</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="556c9e15-9833-47b5-9f8e-a32e99c1025a">
+    <name>СворачиватьПромежуточныеУзлы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сворачивать промежуточные узлы</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="30c834a3-f484-4ce3-9455-f1cdb44963bd">
+    <name>ПутьКПитону</name>
+    <synonym>
+      <key>ru</key>
+      <value>Путь к python</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="a779dc0e-2c42-45f5-9dff-866e3b8b24b5">
+    <name>Отладка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отладка</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <forms uuid="61b2c0c9-f1e4-4cba-8af6-33dac1a6ea60">
+    <name>ОсновнаяФорма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Основная форма</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="4884e550-5ef6-43cf-a6d4-246d589fcaab">
+    <name>Настройки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Настройки</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="1a81d90e-2fec-4b4a-9245-706077357a48">
+    <name>ВыводЭлемента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вывод элемента</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="4eec9e2b-39b9-47df-b2e7-edc7f0255819">
+    <name>ОПрограмме</name>
+    <synonym>
+      <key>ru</key>
+      <value>О программе</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="73a62ea6-a67e-4168-aa1e-ceab63510ab5">
+    <name>ШаблонПоляPlantUML</name>
+    <synonym>
+      <key>ru</key>
+      <value>Шаблон поля plant UML</value>
+    </synonym>
+    <templateType>TextDocument</templateType>
+  </templates>
+  <templates uuid="867d1b96-a9b5-409d-a30c-cec59a5f8259">
+    <name>ЗаставкаPlantUML</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заставка РlantUML</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="b4de283d-730d-44a4-9bae-408f15440f5d">
+    <name>БиблиотекаВизуализацииVisjs</name>
+    <synonym>
+      <key>ru</key>
+      <value>Библиотека визуализации visjs</value>
+    </synonym>
+    <templateType>TextDocument</templateType>
+  </templates>
+  <templates uuid="09618b74-cd0d-4af8-a5d0-3d20736f47b2">
+    <name>СкриптыСериализацииSQL</name>
+    <synonym>
+      <key>ru</key>
+      <value>Скрипты сериализации SQL</value>
+    </synonym>
+    <comment>1.0.0</comment>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="95a18b1e-a77d-4426-8833-863ca84d31ec">
+    <name>ПримерЗапроса1</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пример запроса №1</value>
+    </synonym>
+    <templateType>TextDocument</templateType>
+  </templates>
+  <templates uuid="5e62718c-9ffe-4da8-9e22-af3a5ed50cc7">
+    <name>ПримерЗапроса2</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пример запроса №2</value>
+    </synonym>
+    <templateType>TextDocument</templateType>
+  </templates>
+  <templates uuid="d9c16f47-9375-4d10-9281-0708acf62f14">
+    <name>ПримерЗапроса3</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пример SQL-запроса</value>
+    </synonym>
+    <templateType>TextDocument</templateType>
+  </templates>
+</mdclass:ExternalDataProcessor>

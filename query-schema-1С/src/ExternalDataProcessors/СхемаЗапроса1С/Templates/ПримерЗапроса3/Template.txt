@@ -1,0 +1,613 @@
+SET client_min_messages=error;
+    SET lc_messages to 'en_US.UTF-8';
+    SET enable_mergejoin = off;
+    SET escape_string_warning = off;
+    SET cpu_operator_cost = 0.001;
+    set client_encoding = 'utf8';
+    SET lock_timeout = 20000;
+
+
+--2026-01-29 14:41:14.488000,     duration:2000,     rowsaffected:0
+drop table if exists Monitoring62 cascade;create temporary table Monitoring62 (_Q_000_F_000RRef bytea, _Q_000_F_001RRef bytea, _Q_000_F_002_TYPE bytea, _Q_000_F_002_RTRef bytea, _Q_000_F_002_RRRef bytea, _Q_000_F_003_TYPE bytea, _Q_000_F_003_RTRef bytea, _Q_000_F_003_RRRef bytea, _Q_000_F_004_TYPE bytea, _Q_000_F_004_RTRef bytea, _Q_000_F_004_RRRef bytea, _Q_000_F_005 numeric(22, 2) ) without oids ;
+
+--2026-01-29 14:41:14.524000,     duration:1999,     rowsaffected:0
+drop table if exists Monitoring63 cascade;create temporary table Monitoring63 (_Q_001_F_000RRef bytea, _Q_001_F_001RRef bytea, _Q_001_F_002_TYPE bytea, _Q_001_F_002_RTRef bytea, _Q_001_F_002_RRRef bytea, _Q_001_F_003_TYPE bytea, _Q_001_F_003_RTRef bytea, _Q_001_F_003_RRRef bytea, _Q_001_F_004_TYPE bytea, _Q_001_F_004_RTRef bytea, _Q_001_F_004_RRRef bytea, _Q_001_F_005TRef bytea, _Q_001_F_005RRef bytea, _Q_001_F_006 numeric(28, 2) ) without oids ;
+
+--2026-01-29 14:41:14.561000,     duration:1999,     rowsaffected:0
+drop table if exists Monitoring64 cascade;create temporary table Monitoring64 (_Q_001_F_000RRef bytea, _Q_001_F_001RRef bytea, _Q_001_F_002RRef bytea, _Q_001_F_003RRef bytea, _Q_001_F_004RRef bytea, _Q_001_F_005RRef bytea, _Q_001_F_006 numeric(27, 2) ) without oids ;
+
+--2026-01-29 14:41:14.579000,     duration:1998,     rowsaffected:0
+drop table if exists Monitoring65 cascade;create temporary table Monitoring65 (_Q_001_F_000RRef bytea, _Q_001_F_001RRef bytea, _Q_001_F_002RRef bytea, _Q_001_F_003RRef bytea, _Q_001_F_004RRef bytea, _Q_001_F_005 numeric(33, 2) ) without oids ;
+
+--2026-01-29 14:41:14.585000,     duration:999,     rowsaffected:0
+drop table if exists Monitoring66 cascade;create temporary table Monitoring66 (_Q_001_F_000RRef bytea, _Q_001_F_001RRef bytea, _Q_001_F_002_TYPE bytea, _Q_001_F_002_RTRef bytea, _Q_001_F_002_RRRef bytea, _Q_001_F_003_TYPE bytea, _Q_001_F_003_RTRef bytea, _Q_001_F_003_RRRef bytea, _Q_001_F_004_TYPE bytea, _Q_001_F_004_RTRef bytea, _Q_001_F_004_RRRef bytea, _Q_001_F_005 numeric(34, 2) ) without oids ;
+
+--2026-01-29 14:41:14.597000,     duration:1999,     rowsaffected:0
+drop table if exists Monitoring67 cascade;create temporary table Monitoring67 (_Q_001_F_000RRef bytea, _Q_001_F_001RRef bytea, _Q_001_F_002_TYPE bytea, _Q_001_F_002_RTRef bytea, _Q_001_F_002_RRRef bytea, _Q_001_F_003_TYPE bytea, _Q_001_F_003_RTRef bytea, _Q_001_F_003_RRRef bytea, _Q_001_F_004_TYPE bytea, _Q_001_F_004_RTRef bytea, _Q_001_F_004_RRRef bytea, _Q_001_F_005 numeric(38, 8) ) without oids ;
+
+--2026-01-29 14:41:14.616000,     duration:1999,     rowsaffected:0
+drop table if exists Monitoring68 cascade;create temporary table Monitoring68 (_Q_001_F_000RRef bytea, _Q_001_F_001RRef bytea, _Q_001_F_002_TYPE bytea, _Q_001_F_002_RTRef bytea, _Q_001_F_002_RRRef bytea, _Q_001_F_003_TYPE bytea, _Q_001_F_003_RTRef bytea, _Q_001_F_003_RRRef bytea, _Q_001_F_004_TYPE bytea, _Q_001_F_004_RTRef bytea, _Q_001_F_004_RRRef bytea, _Q_001_F_005 numeric(38, 8) ) without oids ;
+
+--2026-01-29 14:41:14.628000,     duration:999,     rowsaffected:0
+drop table if exists Monitoring69 cascade;create temporary table Monitoring69 (_Q_001_F_000RRef bytea, _Q_001_F_001RRef bytea, _Q_001_F_002 numeric(38, 8) ) without oids ;
+
+--2026-01-29 14:41:14.635000,     duration:1998,     rowsaffected:0
+drop table if exists Monitoring70 cascade;create temporary table Monitoring70 (_Q_001_F_000RRef bytea, _Q_001_F_001RRef bytea, _Q_001_F_002RRef bytea, _Q_001_F_003 numeric(10, 0) ) without oids ;
+
+--2026-01-29 14:43:00.857000,     duration:495997,     rowsaffected:0
+INSERT INTO pg_temp.Monitoring62 (_Q_000_F_000RRef, _Q_000_F_001RRef, _Q_000_F_002_TYPE, _Q_000_F_002_RTRef, _Q_000_F_002_RRRef, _Q_000_F_003_TYPE, _Q_000_F_003_RTRef, _Q_000_F_003_RRRef, _Q_000_F_004_TYPE, _Q_000_F_004_RTRef, _Q_000_F_004_RRRef, _Q_000_F_005) SELECT
+T1.AccountRRef,
+T1.Fld69RRef,
+T1.Value1_TYPE,
+T1.Value1_RTRef,
+T1.Value1_RRRef,
+T1.Value2_TYPE,
+T1.Value2_RTRef,
+T1.Value2_RRRef,
+T1.Value3_TYPE,
+T1.Value3_RTRef,
+T1.Value3_RRRef,
+(T1.Fld71TurnoverDt_ - T1.Fld71TurnoverCt_)
+FROM (SELECT
+T2.AccountRRef AS AccountRRef,
+T2.Fld69RRef AS Fld69RRef,
+T2.Value1_TYPE AS Value1_TYPE,
+T2.Value1_RTRef AS Value1_RTRef,
+T2.Value1_RRRef AS Value1_RRRef,
+T2.Value2_TYPE AS Value2_TYPE,
+T2.Value2_RTRef AS Value2_RTRef,
+T2.Value2_RRRef AS Value2_RRRef,
+T2.Value3_TYPE AS Value3_TYPE,
+T2.Value3_RTRef AS Value3_RTRef,
+T2.Value3_RRRef AS Value3_RRRef,
+CASE WHEN SUM(T2.Fld71TurnoverDt_) IS NULL THEN CAST(0 AS NUMERIC) ELSE SUM(T2.Fld71TurnoverDt_) END AS Fld71TurnoverDt_,
+CASE WHEN SUM(T2.Fld71TurnoverCt_) IS NULL THEN CAST(0 AS NUMERIC) ELSE SUM(T2.Fld71TurnoverCt_) END AS Fld71TurnoverCt_
+FROM (SELECT
+T3._AccountDtRRef AS AccountRRef,
+T3._Fld69RRef AS Fld69RRef,
+CASE WHEN T3._KindDt1RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T3._ValueDt1_TYPE WHEN T3._KindDt2RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T3._ValueDt2_TYPE WHEN T3._KindDt3RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T3._ValueDt3_TYPE ELSE CAST(NULL AS BYTEA) END AS Value1_TYPE,
+CASE WHEN T3._KindDt1RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T3._ValueDt1_RTRef WHEN T3._KindDt2RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T3._ValueDt2_RTRef WHEN T3._KindDt3RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T3._ValueDt3_RTRef ELSE CASE WHEN CAST(NULL AS BYTEA) IS NOT NULL THEN '\\000\\000\\000\\000'::bytea END END AS Value1_RTRef,
+CASE WHEN T3._KindDt1RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T3._ValueDt1_RRRef WHEN T3._KindDt2RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T3._ValueDt2_RRRef WHEN T3._KindDt3RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T3._ValueDt3_RRRef ELSE CASE WHEN CAST(NULL AS BYTEA) IS NOT NULL THEN '\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000'::bytea END END AS Value1_RRRef,
+T4._Value_TYPE AS Value2_TYPE,
+T4._Value_RTRef AS Value2_RTRef,
+T4._Value_RRRef AS Value2_RRRef,
+CASE WHEN T3._KindDt1RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T3._ValueDt1_TYPE WHEN T3._KindDt2RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T3._ValueDt2_TYPE WHEN T3._KindDt3RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T3._ValueDt3_TYPE ELSE CAST(NULL AS BYTEA) END AS Value3_TYPE,
+CASE WHEN T3._KindDt1RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T3._ValueDt1_RTRef WHEN T3._KindDt2RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T3._ValueDt2_RTRef WHEN T3._KindDt3RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T3._ValueDt3_RTRef ELSE CASE WHEN CAST(NULL AS BYTEA) IS NOT NULL THEN '\\000\\000\\000\\000'::bytea END END AS Value3_RTRef,
+CASE WHEN T3._KindDt1RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T3._ValueDt1_RRRef WHEN T3._KindDt2RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T3._ValueDt2_RRRef WHEN T3._KindDt3RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T3._ValueDt3_RRRef ELSE CASE WHEN CAST(NULL AS BYTEA) IS NOT NULL THEN '\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000'::bytea END END AS Value3_RRRef,
+T3._Fld71 AS Fld71TurnoverDt_,
+CAST(CAST(0 AS NUMERIC) AS NUMERIC(15, 2)) AS Fld71TurnoverCt_
+FROM _AccRg68 T3
+INNER JOIN _AccRgED96 T4
+ON T4._RecorderTRef = T3._RecorderTRef AND T4._RecorderRRef = T3._RecorderRRef AND T4._LineNo = T3._LineNo AND T4._Period = T3._Period AND T4._Correspond = CAST(0 AS NUMERIC) AND T4._KindRRef = '\\267\\207\\035\\231\\365a8\\253GWhi\\207k7?'::bytea AND T4._Period >= '2026-01-03 00:00:00'::timestamp AND T4._Period <= '2026-01-03 23:59:59'::timestamp
+WHERE T3._Active = TRUE AND T3._AccountDtRRef <> '\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000'::bytea AND ((T3._AccountDtRRef IN ('\\237\\356Q\\375\\310\\2269\\377N}\\200\\026\\024\\205>\\370'::bytea))) AND ((T3._Fld69RRef IN ('\\215&\\310`\\000F\\271w\\021\\343WnO\\224\\312]'::bytea, '\\215&\\310`\\000F\\271w\\021\\343^`\\364\\374\\370H'::bytea, '\\223\\312\\000\\032d6\\033\\360\\021\\341\\207\\266\\372\\2054 '::bytea, '\\225\\002\\310`\\000F\\271w\\021\\342\\337\\350\\351\\004~`'::bytea, '\\225\\002\\310`\\000F\\271w\\021\\342\\351\\372\\250\\201\\366|'::bytea, '\\236\\036\\310`\\000F\\271w\\021\\344\\313\\320]''M\\261'::bytea, '\\245[1\\345~e\\355,C\\325\\003\\201\\230\\202O\\005'::bytea, '\\245\\303-VR\\177\\315 G\\373R\\033\\216\\230\\012\\217'::bytea, '\\254.\\310`\\000F\\271w\\021\\343\\026\\010\\256\\310*\\246'::bytea, '\\254.\\310`\\000F\\271w\\021\\343\\026\\010\\256\\310*\\260'::bytea, '\\254.\\310`\\000F\\271w\\021\\343\\026\\015\\316/\\374\\244'::bytea, '\\262\\310\\310`\\000F\\271w\\021\\344\\345\\011[Z]\\273'::bytea, '\\264|\\310`\\000F\\271w\\021\\344D\\2577F\\365\\252'::bytea, '\\264|\\310`\\000F\\271w\\021\\344[c\\325& \\231'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\331\\371'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\331\\376'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\332\\024'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\332\\026'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\332\\030'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\332\\032'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\332\\036'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\332 '::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\332"'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\332$'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\332&'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\332('::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\3324'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\3328'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sM\\006\\373H\\374'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sM\\006\\373I\\000'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sM\\006\\373I\\002'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sM\\006\\373I\\010'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sM\\006\\373I\\016'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sM\\006\\373I\\020'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sM\\006\\373I"'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sNO\\341\\035\\320'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sNO\\341\\035\\324'::bytea, '\\266\\011\\000\\032d6\\033\\360\\021\\341\\233L\\200\\342So'::bytea, '\\270-\\000\\032d6\\033\\360\\021\\341\\360\\335\\177#h\\327'::bytea, '\\270-\\000\\032d6\\033\\360\\021\\341\\370\\265{\\016\\225\\330'::bytea, '\\277\\317\\310`\\000F\\271w\\021\\343\\033\\261\\245D\\012\\330'::bytea, '\\277\\317\\310`\\000F\\271w\\021\\343!\\016P\\314\\232W'::bytea, '\\277\\317\\310`\\000F\\271w\\021\\343!\\016P\\314\\232\\\\'::bytea)) AND (T4._Value_TYPE = '\\010'::bytea AND T4._Value_RTRef = '\\000\\000\\000\\027'::bytea)) AND T3._Period >= '2026-01-03 00:00:00'::timestamp AND T3._Period <= '2026-01-03 23:59:59'::timestamp AND CASE WHEN T3._KindDt1RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T3._ValueDt1_TYPE WHEN T3._KindDt2RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T3._ValueDt2_TYPE WHEN T3._KindDt3RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T3._ValueDt3_TYPE ELSE CAST(NULL AS BYTEA) END IS NOT NULL AND CASE WHEN T3._KindDt1RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T3._ValueDt1_RTRef WHEN T3._KindDt2RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T3._ValueDt2_RTRef WHEN T3._KindDt3RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T3._ValueDt3_RTRef ELSE CAST(NULL AS BYTEA) END IS NOT NULL AND CASE WHEN T3._KindDt1RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T3._ValueDt1_RRRef WHEN T3._KindDt2RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T3._ValueDt2_RRRef WHEN T3._KindDt3RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T3._ValueDt3_RRRef ELSE CAST(NULL AS BYTEA) END IS NOT NULL AND CASE WHEN T3._KindDt1RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T3._ValueDt1_TYPE WHEN T3._KindDt2RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T3._ValueDt2_TYPE WHEN T3._KindDt3RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T3._ValueDt3_TYPE ELSE CAST(NULL AS BYTEA) END IS NOT NULL AND CASE WHEN T3._KindDt1RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T3._ValueDt1_RTRef WHEN T3._KindDt2RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T3._ValueDt2_RTRef WHEN T3._KindDt3RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T3._ValueDt3_RTRef ELSE CAST(NULL AS BYTEA) END IS NOT NULL AND CASE WHEN T3._KindDt1RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T3._ValueDt1_RRRef WHEN T3._KindDt2RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T3._ValueDt2_RRRef WHEN T3._KindDt3RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T3._ValueDt3_RRRef ELSE CAST(NULL AS BYTEA) END IS NOT NULL
+UNION ALL SELECT
+T5._AccountCtRRef AS AccountRRef,
+T5._Fld69RRef AS Fld69RRef,
+CASE WHEN T5._KindCt1RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T5._ValueCt1_TYPE WHEN T5._KindCt2RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T5._ValueCt2_TYPE WHEN T5._KindCt3RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T5._ValueCt3_TYPE ELSE CAST(NULL AS BYTEA) END AS Value1_TYPE,
+CASE WHEN T5._KindCt1RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T5._ValueCt1_RTRef WHEN T5._KindCt2RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T5._ValueCt2_RTRef WHEN T5._KindCt3RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T5._ValueCt3_RTRef ELSE CASE WHEN CAST(NULL AS BYTEA) IS NOT NULL THEN '\\000\\000\\000\\000'::bytea END END AS Value1_RTRef,
+CASE WHEN T5._KindCt1RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T5._ValueCt1_RRRef WHEN T5._KindCt2RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T5._ValueCt2_RRRef WHEN T5._KindCt3RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T5._ValueCt3_RRRef ELSE CASE WHEN CAST(NULL AS BYTEA) IS NOT NULL THEN '\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000'::bytea END END AS Value1_RRRef,
+T6._Value_TYPE AS Value2_TYPE,
+T6._Value_RTRef AS Value2_RTRef,
+T6._Value_RRRef AS Value2_RRRef,
+CASE WHEN T5._KindCt1RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T5._ValueCt1_TYPE WHEN T5._KindCt2RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T5._ValueCt2_TYPE WHEN T5._KindCt3RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T5._ValueCt3_TYPE ELSE CAST(NULL AS BYTEA) END AS Value3_TYPE,
+CASE WHEN T5._KindCt1RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T5._ValueCt1_RTRef WHEN T5._KindCt2RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T5._ValueCt2_RTRef WHEN T5._KindCt3RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T5._ValueCt3_RTRef ELSE CASE WHEN CAST(NULL AS BYTEA) IS NOT NULL THEN '\\000\\000\\000\\000'::bytea END END AS Value3_RTRef,
+CASE WHEN T5._KindCt1RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T5._ValueCt1_RRRef WHEN T5._KindCt2RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T5._ValueCt2_RRRef WHEN T5._KindCt3RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T5._ValueCt3_RRRef ELSE CASE WHEN CAST(NULL AS BYTEA) IS NOT NULL THEN '\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000'::bytea END END AS Value3_RRRef,
+CAST(CAST(0 AS NUMERIC) AS NUMERIC(15, 2)) AS Fld71TurnoverDt_,
+T5._Fld71 AS Fld71TurnoverCt_
+FROM _AccRg68 T5
+INNER JOIN _AccRgED96 T6
+ON T6._RecorderTRef = T5._RecorderTRef AND T6._RecorderRRef = T5._RecorderRRef AND T6._LineNo = T5._LineNo AND T6._Period = T5._Period AND T6._Correspond = CAST(1 AS NUMERIC) AND T6._KindRRef = '\\267\\207\\035\\231\\365a8\\253GWhi\\207k7?'::bytea AND T6._Period >= '2026-01-03 00:00:00'::timestamp AND T6._Period <= '2026-01-03 23:59:59'::timestamp
+WHERE T5._Active = TRUE AND T5._AccountCtRRef <> '\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000'::bytea AND ((T5._AccountCtRRef IN ('\\237\\356Q\\375\\310\\2269\\377N}\\200\\026\\024\\205>\\370'::bytea))) AND ((T5._Fld69RRef IN ('\\215&\\310`\\000F\\271w\\021\\343WnO\\224\\312]'::bytea, '\\215&\\310`\\000F\\271w\\021\\343^`\\364\\374\\370H'::bytea, '\\223\\312\\000\\032d6\\033\\360\\021\\341\\207\\266\\372\\2054 '::bytea, '\\225\\002\\310`\\000F\\271w\\021\\342\\337\\350\\351\\004~`'::bytea, '\\225\\002\\310`\\000F\\271w\\021\\342\\351\\372\\250\\201\\366|'::bytea, '\\236\\036\\310`\\000F\\271w\\021\\344\\313\\320]''M\\261'::bytea, '\\245[1\\345~e\\355,C\\325\\003\\201\\230\\202O\\005'::bytea, '\\245\\303-VR\\177\\315 G\\373R\\033\\216\\230\\012\\217'::bytea, '\\254.\\310`\\000F\\271w\\021\\343\\026\\010\\256\\310*\\246'::bytea, '\\254.\\310`\\000F\\271w\\021\\343\\026\\010\\256\\310*\\260'::bytea, '\\254.\\310`\\000F\\271w\\021\\343\\026\\015\\316/\\374\\244'::bytea, '\\262\\310\\310`\\000F\\271w\\021\\344\\345\\011[Z]\\273'::bytea, '\\264|\\310`\\000F\\271w\\021\\344D\\2577F\\365\\252'::bytea, '\\264|\\310`\\000F\\271w\\021\\344[c\\325& \\231'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\331\\371'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\331\\376'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\332\\024'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\332\\026'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\332\\030'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\332\\032'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\332\\036'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\332 '::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\332"'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\332$'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\332&'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\332('::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\3324'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\3328'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sM\\006\\373H\\374'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sM\\006\\373I\\000'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sM\\006\\373I\\002'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sM\\006\\373I\\010'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sM\\006\\373I\\016'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sM\\006\\373I\\020'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sM\\006\\373I"'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sNO\\341\\035\\320'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sNO\\341\\035\\324'::bytea, '\\266\\011\\000\\032d6\\033\\360\\021\\341\\233L\\200\\342So'::bytea, '\\270-\\000\\032d6\\033\\360\\021\\341\\360\\335\\177#h\\327'::bytea, '\\270-\\000\\032d6\\033\\360\\021\\341\\370\\265{\\016\\225\\330'::bytea, '\\277\\317\\310`\\000F\\271w\\021\\343\\033\\261\\245D\\012\\330'::bytea, '\\277\\317\\310`\\000F\\271w\\021\\343!\\016P\\314\\232W'::bytea, '\\277\\317\\310`\\000F\\271w\\021\\343!\\016P\\314\\232\\\\'::bytea)) AND (T6._Value_TYPE = '\\010'::bytea AND T6._Value_RTRef = '\\000\\000\\000\\027'::bytea)) AND T5._Period >= '2026-01-03 00:00:00'::timestamp AND T5._Period <= '2026-01-03 23:59:59'::timestamp AND CASE WHEN T5._KindCt1RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T5._ValueCt1_TYPE WHEN T5._KindCt2RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T5._ValueCt2_TYPE WHEN T5._KindCt3RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T5._ValueCt3_TYPE ELSE CAST(NULL AS BYTEA) END IS NOT NULL AND CASE WHEN T5._KindCt1RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T5._ValueCt1_RTRef WHEN T5._KindCt2RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T5._ValueCt2_RTRef WHEN T5._KindCt3RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T5._ValueCt3_RTRef ELSE CAST(NULL AS BYTEA) END IS NOT NULL AND CASE WHEN T5._KindCt1RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T5._ValueCt1_RRRef WHEN T5._KindCt2RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T5._ValueCt2_RRRef WHEN T5._KindCt3RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T5._ValueCt3_RRRef ELSE CAST(NULL AS BYTEA) END IS NOT NULL AND CASE WHEN T5._KindCt1RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T5._ValueCt1_TYPE WHEN T5._KindCt2RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T5._ValueCt2_TYPE WHEN T5._KindCt3RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T5._ValueCt3_TYPE ELSE CAST(NULL AS BYTEA) END IS NOT NULL AND CASE WHEN T5._KindCt1RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T5._ValueCt1_RTRef WHEN T5._KindCt2RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T5._ValueCt2_RTRef WHEN T5._KindCt3RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T5._ValueCt3_RTRef ELSE CAST(NULL AS BYTEA) END IS NOT NULL AND CASE WHEN T5._KindCt1RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T5._ValueCt1_RRRef WHEN T5._KindCt2RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T5._ValueCt2_RRRef WHEN T5._KindCt3RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T5._ValueCt3_RRRef ELSE CAST(NULL AS BYTEA) END IS NOT NULL) T2
+GROUP BY T2.AccountRRef,
+T2.Fld69RRef,
+T2.Value1_TYPE,
+T2.Value1_RTRef,
+T2.Value1_RRRef,
+T2.Value2_TYPE,
+T2.Value2_RTRef,
+T2.Value2_RRRef,
+T2.Value3_TYPE,
+T2.Value3_RTRef,
+T2.Value3_RRRef
+HAVING (CASE WHEN SUM(T2.Fld71TurnoverDt_) IS NULL THEN CAST(0 AS NUMERIC) ELSE SUM(T2.Fld71TurnoverDt_) END) <> CAST(0 AS NUMERIC) OR (CASE WHEN SUM(T2.Fld71TurnoverCt_) IS NULL THEN CAST(0 AS NUMERIC) ELSE SUM(T2.Fld71TurnoverCt_) END) <> CAST(0 AS NUMERIC)) T1;
+
+--2026-01-29 14:43:00.902000,     duration:26997,     rowsaffected:0
+INSERT INTO pg_temp.Monitoring63 (_Q_001_F_000RRef, _Q_001_F_001RRef, _Q_001_F_002_TYPE, _Q_001_F_002_RTRef, _Q_001_F_002_RRRef, _Q_001_F_003_TYPE, _Q_001_F_003_RTRef, _Q_001_F_003_RRRef, _Q_001_F_004_TYPE, _Q_001_F_004_RTRef, _Q_001_F_004_RRRef, _Q_001_F_005TRef, _Q_001_F_005RRef, _Q_001_F_006) SELECT
+T1.AccountRRef,
+T1.Fld69RRef,
+T1.Value1_TYPE,
+T1.Value1_RTRef,
+T1.Value1_RRRef,
+T1.Value2_TYPE,
+T1.Value2_RTRef,
+T1.Value2_RRRef,
+T1.Value3_TYPE,
+T1.Value3_RTRef,
+T1.Value3_RRRef,
+T1.RecorderTRef,
+T1.RecorderRRef,
+(SUM(T1.Fld71TurnoverDt_) - SUM(T1.Fld71TurnoverCt_))
+FROM (SELECT
+T2.Period_ AS Period_,
+T2.RecorderTRef AS RecorderTRef,
+T2.RecorderRRef AS RecorderRRef,
+T2.AccountRRef AS AccountRRef,
+T2.Fld69RRef AS Fld69RRef,
+T2.Value1_TYPE AS Value1_TYPE,
+T2.Value1_RTRef AS Value1_RTRef,
+T2.Value1_RRRef AS Value1_RRRef,
+T2.Value2_TYPE AS Value2_TYPE,
+T2.Value2_RTRef AS Value2_RTRef,
+T2.Value2_RRRef AS Value2_RRRef,
+T2.Value3_TYPE AS Value3_TYPE,
+T2.Value3_RTRef AS Value3_RTRef,
+T2.Value3_RRRef AS Value3_RRRef,
+CASE WHEN SUM(T2.Fld71TurnoverDt_) IS NULL THEN CAST(0 AS NUMERIC) ELSE SUM(T2.Fld71TurnoverDt_) END AS Fld71TurnoverDt_,
+CASE WHEN SUM(T2.Fld71TurnoverCt_) IS NULL THEN CAST(0 AS NUMERIC) ELSE SUM(T2.Fld71TurnoverCt_) END AS Fld71TurnoverCt_
+FROM (SELECT
+T3._Period AS Period_,
+T3._RecorderTRef AS RecorderTRef,
+T3._RecorderRRef AS RecorderRRef,
+T3._AccountDtRRef AS AccountRRef,
+T3._Fld69RRef AS Fld69RRef,
+CASE WHEN T3._KindDt1RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T3._ValueDt1_TYPE WHEN T3._KindDt2RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T3._ValueDt2_TYPE WHEN T3._KindDt3RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T3._ValueDt3_TYPE ELSE CAST(NULL AS BYTEA) END AS Value1_TYPE,
+CASE WHEN T3._KindDt1RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T3._ValueDt1_RTRef WHEN T3._KindDt2RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T3._ValueDt2_RTRef WHEN T3._KindDt3RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T3._ValueDt3_RTRef ELSE CASE WHEN CAST(NULL AS BYTEA) IS NOT NULL THEN '\\000\\000\\000\\000'::bytea END END AS Value1_RTRef,
+CASE WHEN T3._KindDt1RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T3._ValueDt1_RRRef WHEN T3._KindDt2RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T3._ValueDt2_RRRef WHEN T3._KindDt3RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T3._ValueDt3_RRRef ELSE CASE WHEN CAST(NULL AS BYTEA) IS NOT NULL THEN '\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000'::bytea END END AS Value1_RRRef,
+T4._Value_TYPE AS Value2_TYPE,
+T4._Value_RTRef AS Value2_RTRef,
+T4._Value_RRRef AS Value2_RRRef,
+CASE WHEN T3._KindDt1RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T3._ValueDt1_TYPE WHEN T3._KindDt2RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T3._ValueDt2_TYPE WHEN T3._KindDt3RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T3._ValueDt3_TYPE ELSE CAST(NULL AS BYTEA) END AS Value3_TYPE,
+CASE WHEN T3._KindDt1RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T3._ValueDt1_RTRef WHEN T3._KindDt2RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T3._ValueDt2_RTRef WHEN T3._KindDt3RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T3._ValueDt3_RTRef ELSE CASE WHEN CAST(NULL AS BYTEA) IS NOT NULL THEN '\\000\\000\\000\\000'::bytea END END AS Value3_RTRef,
+CASE WHEN T3._KindDt1RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T3._ValueDt1_RRRef WHEN T3._KindDt2RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T3._ValueDt2_RRRef WHEN T3._KindDt3RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T3._ValueDt3_RRRef ELSE CASE WHEN CAST(NULL AS BYTEA) IS NOT NULL THEN '\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000'::bytea END END AS Value3_RRRef,
+T3._Fld71 AS Fld71TurnoverDt_,
+CAST(CAST(0 AS NUMERIC) AS NUMERIC(15, 2)) AS Fld71TurnoverCt_
+FROM _AccRg68 T3
+INNER JOIN _AccRgED96 T4
+ON T4._RecorderTRef = T3._RecorderTRef AND T4._RecorderRRef = T3._RecorderRRef AND T4._LineNo = T3._LineNo AND T4._Period = T3._Period AND T4._Correspond = CAST(0 AS NUMERIC) AND T4._KindRRef = '\\267\\207\\035\\231\\365a8\\253GWhi\\207k7?'::bytea AND T4._Period >= '2026-01-03 00:00:00'::timestamp AND T4._Period <= '2026-01-03 23:59:59'::timestamp
+WHERE T3._Active = TRUE AND T3._AccountDtRRef <> '\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000'::bytea AND ((T3._AccountDtRRef IN ('\\237\\356Q\\375\\310\\2269\\377N}\\200\\026\\024\\205>\\370'::bytea))) AND ((T3._Fld69RRef IN ('\\215&\\310`\\000F\\271w\\021\\343WnO\\224\\312]'::bytea, '\\215&\\310`\\000F\\271w\\021\\343^`\\364\\374\\370H'::bytea, '\\223\\312\\000\\032d6\\033\\360\\021\\341\\207\\266\\372\\2054 '::bytea, '\\225\\002\\310`\\000F\\271w\\021\\342\\337\\350\\351\\004~`'::bytea, '\\225\\002\\310`\\000F\\271w\\021\\342\\351\\372\\250\\201\\366|'::bytea, '\\236\\036\\310`\\000F\\271w\\021\\344\\313\\320]''M\\261'::bytea, '\\245[1\\345~e\\355,C\\325\\003\\201\\230\\202O\\005'::bytea, '\\245\\303-VR\\177\\315 G\\373R\\033\\216\\230\\012\\217'::bytea, '\\254.\\310`\\000F\\271w\\021\\343\\026\\010\\256\\310*\\246'::bytea, '\\254.\\310`\\000F\\271w\\021\\343\\026\\010\\256\\310*\\260'::bytea, '\\254.\\310`\\000F\\271w\\021\\343\\026\\015\\316/\\374\\244'::bytea, '\\262\\310\\310`\\000F\\271w\\021\\344\\345\\011[Z]\\273'::bytea, '\\264|\\310`\\000F\\271w\\021\\344D\\2577F\\365\\252'::bytea, '\\264|\\310`\\000F\\271w\\021\\344[c\\325& \\231'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\331\\371'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\331\\376'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\332\\024'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\332\\026'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\332\\030'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\332\\032'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\332\\036'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\332 '::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\332"'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\332$'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\332&'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\332('::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\3324'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\3328'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sM\\006\\373H\\374'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sM\\006\\373I\\000'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sM\\006\\373I\\002'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sM\\006\\373I\\010'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sM\\006\\373I\\016'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sM\\006\\373I\\020'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sM\\006\\373I"'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sNO\\341\\035\\320'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sNO\\341\\035\\324'::bytea, '\\266\\011\\000\\032d6\\033\\360\\021\\341\\233L\\200\\342So'::bytea, '\\270-\\000\\032d6\\033\\360\\021\\341\\360\\335\\177#h\\327'::bytea, '\\270-\\000\\032d6\\033\\360\\021\\341\\370\\265{\\016\\225\\330'::bytea, '\\277\\317\\310`\\000F\\271w\\021\\343\\033\\261\\245D\\012\\330'::bytea, '\\277\\317\\310`\\000F\\271w\\021\\343!\\016P\\314\\232W'::bytea, '\\277\\317\\310`\\000F\\271w\\021\\343!\\016P\\314\\232\\\\'::bytea)) AND (T4._Value_TYPE = '\\010'::bytea AND T4._Value_RTRef = '\\000\\000\\000\\027'::bytea)) AND T3._Period >= '2026-01-03 00:00:00'::timestamp AND T3._Period <= '2026-01-03 23:59:59'::timestamp AND CASE WHEN T3._KindDt1RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T3._ValueDt1_TYPE WHEN T3._KindDt2RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T3._ValueDt2_TYPE WHEN T3._KindDt3RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T3._ValueDt3_TYPE ELSE CAST(NULL AS BYTEA) END IS NOT NULL AND CASE WHEN T3._KindDt1RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T3._ValueDt1_RTRef WHEN T3._KindDt2RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T3._ValueDt2_RTRef WHEN T3._KindDt3RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T3._ValueDt3_RTRef ELSE CAST(NULL AS BYTEA) END IS NOT NULL AND CASE WHEN T3._KindDt1RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T3._ValueDt1_RRRef WHEN T3._KindDt2RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T3._ValueDt2_RRRef WHEN T3._KindDt3RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T3._ValueDt3_RRRef ELSE CAST(NULL AS BYTEA) END IS NOT NULL AND CASE WHEN T3._KindDt1RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T3._ValueDt1_TYPE WHEN T3._KindDt2RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T3._ValueDt2_TYPE WHEN T3._KindDt3RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T3._ValueDt3_TYPE ELSE CAST(NULL AS BYTEA) END IS NOT NULL AND CASE WHEN T3._KindDt1RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T3._ValueDt1_RTRef WHEN T3._KindDt2RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T3._ValueDt2_RTRef WHEN T3._KindDt3RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T3._ValueDt3_RTRef ELSE CAST(NULL AS BYTEA) END IS NOT NULL AND CASE WHEN T3._KindDt1RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T3._ValueDt1_RRRef WHEN T3._KindDt2RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T3._ValueDt2_RRRef WHEN T3._KindDt3RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T3._ValueDt3_RRRef ELSE CAST(NULL AS BYTEA) END IS NOT NULL
+UNION ALL SELECT
+T5._Period AS Period_,
+T5._RecorderTRef AS RecorderTRef,
+T5._RecorderRRef AS RecorderRRef,
+T5._AccountCtRRef AS AccountRRef,
+T5._Fld69RRef AS Fld69RRef,
+CASE WHEN T5._KindCt1RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T5._ValueCt1_TYPE WHEN T5._KindCt2RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T5._ValueCt2_TYPE WHEN T5._KindCt3RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T5._ValueCt3_TYPE ELSE CAST(NULL AS BYTEA) END AS Value1_TYPE,
+CASE WHEN T5._KindCt1RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T5._ValueCt1_RTRef WHEN T5._KindCt2RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T5._ValueCt2_RTRef WHEN T5._KindCt3RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T5._ValueCt3_RTRef ELSE CASE WHEN CAST(NULL AS BYTEA) IS NOT NULL THEN '\\000\\000\\000\\000'::bytea END END AS Value1_RTRef,
+CASE WHEN T5._KindCt1RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T5._ValueCt1_RRRef WHEN T5._KindCt2RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T5._ValueCt2_RRRef WHEN T5._KindCt3RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T5._ValueCt3_RRRef ELSE CASE WHEN CAST(NULL AS BYTEA) IS NOT NULL THEN '\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000'::bytea END END AS Value1_RRRef,
+T6._Value_TYPE AS Value2_TYPE,
+T6._Value_RTRef AS Value2_RTRef,
+T6._Value_RRRef AS Value2_RRRef,
+CASE WHEN T5._KindCt1RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T5._ValueCt1_TYPE WHEN T5._KindCt2RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T5._ValueCt2_TYPE WHEN T5._KindCt3RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T5._ValueCt3_TYPE ELSE CAST(NULL AS BYTEA) END AS Value3_TYPE,
+CASE WHEN T5._KindCt1RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T5._ValueCt1_RTRef WHEN T5._KindCt2RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T5._ValueCt2_RTRef WHEN T5._KindCt3RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T5._ValueCt3_RTRef ELSE CASE WHEN CAST(NULL AS BYTEA) IS NOT NULL THEN '\\000\\000\\000\\000'::bytea END END AS Value3_RTRef,
+CASE WHEN T5._KindCt1RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T5._ValueCt1_RRRef WHEN T5._KindCt2RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T5._ValueCt2_RRRef WHEN T5._KindCt3RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T5._ValueCt3_RRRef ELSE CASE WHEN CAST(NULL AS BYTEA) IS NOT NULL THEN '\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000'::bytea END END AS Value3_RRRef,
+CAST(CAST(0 AS NUMERIC) AS NUMERIC(15, 2)) AS Fld71TurnoverDt_,
+T5._Fld71 AS Fld71TurnoverCt_
+FROM _AccRg68 T5
+INNER JOIN _AccRgED96 T6
+ON T6._RecorderTRef = T5._RecorderTRef AND T6._RecorderRRef = T5._RecorderRRef AND T6._LineNo = T5._LineNo AND T6._Period = T5._Period AND T6._Correspond = CAST(1 AS NUMERIC) AND T6._KindRRef = '\\267\\207\\035\\231\\365a8\\253GWhi\\207k7?'::bytea AND T6._Period >= '2026-01-03 00:00:00'::timestamp AND T6._Period <= '2026-01-03 23:59:59'::timestamp
+WHERE T5._Active = TRUE AND T5._AccountCtRRef <> '\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000'::bytea AND ((T5._AccountCtRRef IN ('\\237\\356Q\\375\\310\\2269\\377N}\\200\\026\\024\\205>\\370'::bytea))) AND ((T5._Fld69RRef IN ('\\215&\\310`\\000F\\271w\\021\\343WnO\\224\\312]'::bytea, '\\215&\\310`\\000F\\271w\\021\\343^`\\364\\374\\370H'::bytea, '\\223\\312\\000\\032d6\\033\\360\\021\\341\\207\\266\\372\\2054 '::bytea, '\\225\\002\\310`\\000F\\271w\\021\\342\\337\\350\\351\\004~`'::bytea, '\\225\\002\\310`\\000F\\271w\\021\\342\\351\\372\\250\\201\\366|'::bytea, '\\236\\036\\310`\\000F\\271w\\021\\344\\313\\320]''M\\261'::bytea, '\\245[1\\345~e\\355,C\\325\\003\\201\\230\\202O\\005'::bytea, '\\245\\303-VR\\177\\315 G\\373R\\033\\216\\230\\012\\217'::bytea, '\\254.\\310`\\000F\\271w\\021\\343\\026\\010\\256\\310*\\246'::bytea, '\\254.\\310`\\000F\\271w\\021\\343\\026\\010\\256\\310*\\260'::bytea, '\\254.\\310`\\000F\\271w\\021\\343\\026\\015\\316/\\374\\244'::bytea, '\\262\\310\\310`\\000F\\271w\\021\\344\\345\\011[Z]\\273'::bytea, '\\264|\\310`\\000F\\271w\\021\\344D\\2577F\\365\\252'::bytea, '\\264|\\310`\\000F\\271w\\021\\344[c\\325& \\231'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\331\\371'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\331\\376'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\332\\024'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\332\\026'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\332\\030'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\332\\032'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\332\\036'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\332 '::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\332"'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\332$'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\332&'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\332('::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\3324'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\3328'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sM\\006\\373H\\374'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sM\\006\\373I\\000'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sM\\006\\373I\\002'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sM\\006\\373I\\010'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sM\\006\\373I\\016'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sM\\006\\373I\\020'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sM\\006\\373I"'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sNO\\341\\035\\320'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sNO\\341\\035\\324'::bytea, '\\266\\011\\000\\032d6\\033\\360\\021\\341\\233L\\200\\342So'::bytea, '\\270-\\000\\032d6\\033\\360\\021\\341\\360\\335\\177#h\\327'::bytea, '\\270-\\000\\032d6\\033\\360\\021\\341\\370\\265{\\016\\225\\330'::bytea, '\\277\\317\\310`\\000F\\271w\\021\\343\\033\\261\\245D\\012\\330'::bytea, '\\277\\317\\310`\\000F\\271w\\021\\343!\\016P\\314\\232W'::bytea, '\\277\\317\\310`\\000F\\271w\\021\\343!\\016P\\314\\232\\\\'::bytea)) AND (T6._Value_TYPE = '\\010'::bytea AND T6._Value_RTRef = '\\000\\000\\000\\027'::bytea)) AND T5._Period >= '2026-01-03 00:00:00'::timestamp AND T5._Period <= '2026-01-03 23:59:59'::timestamp AND CASE WHEN T5._KindCt1RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T5._ValueCt1_TYPE WHEN T5._KindCt2RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T5._ValueCt2_TYPE WHEN T5._KindCt3RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T5._ValueCt3_TYPE ELSE CAST(NULL AS BYTEA) END IS NOT NULL AND CASE WHEN T5._KindCt1RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T5._ValueCt1_RTRef WHEN T5._KindCt2RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T5._ValueCt2_RTRef WHEN T5._KindCt3RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T5._ValueCt3_RTRef ELSE CAST(NULL AS BYTEA) END IS NOT NULL AND CASE WHEN T5._KindCt1RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T5._ValueCt1_RRRef WHEN T5._KindCt2RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T5._ValueCt2_RRRef WHEN T5._KindCt3RRef = '\\243\\312\\005\\244\\177\\246\\252}I\\332\\347W\\240$y='::bytea THEN T5._ValueCt3_RRRef ELSE CAST(NULL AS BYTEA) END IS NOT NULL AND CASE WHEN T5._KindCt1RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T5._ValueCt1_TYPE WHEN T5._KindCt2RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T5._ValueCt2_TYPE WHEN T5._KindCt3RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T5._ValueCt3_TYPE ELSE CAST(NULL AS BYTEA) END IS NOT NULL AND CASE WHEN T5._KindCt1RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T5._ValueCt1_RTRef WHEN T5._KindCt2RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T5._ValueCt2_RTRef WHEN T5._KindCt3RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T5._ValueCt3_RTRef ELSE CAST(NULL AS BYTEA) END IS NOT NULL AND CASE WHEN T5._KindCt1RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T5._ValueCt1_RRRef WHEN T5._KindCt2RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T5._ValueCt2_RRRef WHEN T5._KindCt3RRef = '\\214\\263*.\\020\\355END\\200\\240\\253\\234\\037\\024p'::bytea THEN T5._ValueCt3_RRRef ELSE CAST(NULL AS BYTEA) END IS NOT NULL) T2
+GROUP BY T2.Period_,
+T2.RecorderTRef,
+T2.RecorderRRef,
+T2.AccountRRef,
+T2.Fld69RRef,
+T2.Value1_TYPE,
+T2.Value1_RTRef,
+T2.Value1_RRRef,
+T2.Value2_TYPE,
+T2.Value2_RTRef,
+T2.Value2_RRRef,
+T2.Value3_TYPE,
+T2.Value3_RTRef,
+T2.Value3_RRRef
+HAVING (CASE WHEN SUM(T2.Fld71TurnoverDt_) IS NULL THEN CAST(0 AS NUMERIC) ELSE SUM(T2.Fld71TurnoverDt_) END) <> CAST(0 AS NUMERIC) OR (CASE WHEN SUM(T2.Fld71TurnoverCt_) IS NULL THEN CAST(0 AS NUMERIC) ELSE SUM(T2.Fld71TurnoverCt_) END) <> CAST(0 AS NUMERIC)) T1
+LEFT OUTER JOIN _Document39 T7
+ON T1.RecorderTRef = '\\000\\000\\000'''::bytea AND T1.RecorderRRef = T7._IDRRef
+LEFT OUTER JOIN _Reference32 T8
+ON T7._Fld410RRef = T8._IDRRef
+WHERE (T1.RecorderTRef = '\\000\\000\\000'''::bytea) AND (T8._OwnerIDRRef = '\\235=\\366-KV\\202a\\021\\360\\372\\232=\\265\\227\\204'::bytea)
+GROUP BY T1.AccountRRef,
+T1.Fld69RRef,
+T1.Value1_TYPE,
+T1.Value1_RTRef,
+T1.Value1_RRRef,
+T1.Value2_TYPE,
+T1.Value2_RTRef,
+T1.Value2_RRRef,
+T1.Value3_TYPE,
+T1.Value3_RTRef,
+T1.Value3_RRRef,
+T1.RecorderTRef,
+T1.RecorderRRef;
+
+--2026-01-29 14:43:00.925000,     duration:7997,     rowsaffected:0
+INSERT INTO pg_temp.Monitoring64 (_Q_001_F_000RRef, _Q_001_F_001RRef, _Q_001_F_002RRef, _Q_001_F_003RRef, _Q_001_F_004RRef, _Q_001_F_005RRef, _Q_001_F_006) SELECT
+T1.Q_001_F_000RRef,
+T1.Q_001_F_002RRef,
+T1.Q_001_F_003RRef,
+T1.Q_001_F_004RRef,
+T1.Q_001_F_005RRef,
+T1.Q_001_F_001RRef,
+SUM(T1.Q_001_F_006_)
+FROM (SELECT
+T2.Fld610RRef AS Q_001_F_000RRef,
+CASE WHEN T2.RecorderTRef = '\\000\\000\\000'''::bytea THEN T2.RecorderRRef END AS Q_001_F_001RRef,
+T2.Fld612RRef AS Q_001_F_002RRef,
+T2.Fld614RRef AS Q_001_F_003RRef,
+T2.Fld616RRef AS Q_001_F_004RRef,
+T2.Fld1289RRef AS Q_001_F_005RRef,
+T2.Fld618Turnover_ AS Q_001_F_006_
+FROM (SELECT
+T3._Period AS Period_,
+T3._RecorderTRef AS RecorderTRef,
+T3._RecorderRRef AS RecorderRRef,
+T3._Fld610RRef AS Fld610RRef,
+T3._Fld612RRef AS Fld612RRef,
+T3._Fld614RRef AS Fld614RRef,
+T3._Fld616RRef AS Fld616RRef,
+T3._Fld1289RRef AS Fld1289RRef,
+SUM(T3._Fld618) AS Fld618Turnover_
+FROM _AccumRg609 T3
+WHERE T3._Period >= '2026-01-03 00:00:00'::timestamp AND T3._Period <= '2026-01-03 23:59:59'::timestamp AND T3._Active = TRUE AND ((T3._Fld610RRef IN ('\\237\\356Q\\375\\310\\2269\\377N}\\200\\026\\024\\205>\\370'::bytea)) AND (T3._Fld669RRef = '\\226w\\254"\\013\\013\\317\\037\\021\\346\\022\\242b\\016\\036f'::bytea) AND (T3._Fld612RRef IN ('\\215&\\310`\\000F\\271w\\021\\343WnO\\224\\312]'::bytea, '\\215&\\310`\\000F\\271w\\021\\343^`\\364\\374\\370H'::bytea, '\\223\\312\\000\\032d6\\033\\360\\021\\341\\207\\266\\372\\2054 '::bytea, '\\225\\002\\310`\\000F\\271w\\021\\342\\337\\350\\351\\004~`'::bytea, '\\225\\002\\310`\\000F\\271w\\021\\342\\351\\372\\250\\201\\366|'::bytea, '\\236\\036\\310`\\000F\\271w\\021\\344\\313\\320]''M\\261'::bytea, '\\245[1\\345~e\\355,C\\325\\003\\201\\230\\202O\\005'::bytea, '\\245\\303-VR\\177\\315 G\\373R\\033\\216\\230\\012\\217'::bytea, '\\254.\\310`\\000F\\271w\\021\\343\\026\\010\\256\\310*\\246'::bytea, '\\254.\\310`\\000F\\271w\\021\\343\\026\\010\\256\\310*\\260'::bytea, '\\254.\\310`\\000F\\271w\\021\\343\\026\\015\\316/\\374\\244'::bytea, '\\262\\310\\310`\\000F\\271w\\021\\344\\345\\011[Z]\\273'::bytea, '\\264|\\310`\\000F\\271w\\021\\344D\\2577F\\365\\252'::bytea, '\\264|\\310`\\000F\\271w\\021\\344[c\\325& \\231'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\331\\371'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\331\\376'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\332\\024'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\332\\026'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\332\\030'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\332\\032'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\332\\036'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\332 '::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\332"'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\332$'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\332&'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\332('::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\3324'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\3328'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sM\\006\\373H\\374'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sM\\006\\373I\\000'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sM\\006\\373I\\002'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sM\\006\\373I\\010'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sM\\006\\373I\\016'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sM\\006\\373I\\020'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sM\\006\\373I"'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sNO\\341\\035\\320'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sNO\\341\\035\\324'::bytea, '\\266\\011\\000\\032d6\\033\\360\\021\\341\\233L\\200\\342So'::bytea, '\\270-\\000\\032d6\\033\\360\\021\\341\\360\\335\\177#h\\327'::bytea, '\\270-\\000\\032d6\\033\\360\\021\\341\\370\\265{\\016\\225\\330'::bytea, '\\277\\317\\310`\\000F\\271w\\021\\343\\033\\261\\245D\\012\\330'::bytea, '\\277\\317\\310`\\000F\\271w\\021\\343!\\016P\\314\\232W'::bytea, '\\277\\317\\310`\\000F\\271w\\021\\343!\\016P\\314\\232\\\\'::bytea)))
+GROUP BY T3._Period,
+T3._RecorderTRef,
+T3._RecorderRRef,
+T3._Fld610RRef,
+T3._Fld612RRef,
+T3._Fld614RRef,
+T3._Fld616RRef,
+T3._Fld1289RRef
+HAVING (SUM(T3._Fld618)) <> CAST(0 AS NUMERIC)) T2
+WHERE (T2.RecorderTRef = '\\000\\000\\000'''::bytea)
+UNION ALL SELECT
+T4.Fld611RRef AS Fld611RRef,
+CASE WHEN T4.RecorderTRef = '\\000\\000\\000'''::bytea THEN T4.RecorderRRef END,
+T4.Fld613RRef AS Fld613RRef,
+T4.Fld615RRef AS Fld615RRef,
+T4.Fld617RRef AS Fld617RRef,
+T4.Fld1290RRef AS Fld1290RRef,
+-(T4.Fld618Turnover_)
+FROM (SELECT
+T5._Period AS Period_,
+T5._RecorderTRef AS RecorderTRef,
+T5._RecorderRRef AS RecorderRRef,
+T5._Fld611RRef AS Fld611RRef,
+T5._Fld613RRef AS Fld613RRef,
+T5._Fld615RRef AS Fld615RRef,
+T5._Fld617RRef AS Fld617RRef,
+T5._Fld1290RRef AS Fld1290RRef,
+SUM(T5._Fld618) AS Fld618Turnover_
+FROM _AccumRg609 T5
+WHERE T5._Period >= '2026-01-03 00:00:00'::timestamp AND T5._Period <= '2026-01-03 23:59:59'::timestamp AND T5._Active = TRUE AND ((T5._Fld611RRef IN ('\\237\\356Q\\375\\310\\2269\\377N}\\200\\026\\024\\205>\\370'::bytea)) AND (T5._Fld669RRef = '\\226w\\254"\\013\\013\\317\\037\\021\\346\\022\\242b\\016\\036f'::bytea) AND (T5._Fld613RRef IN ('\\215&\\310`\\000F\\271w\\021\\343WnO\\224\\312]'::bytea, '\\215&\\310`\\000F\\271w\\021\\343^`\\364\\374\\370H'::bytea, '\\223\\312\\000\\032d6\\033\\360\\021\\341\\207\\266\\372\\2054 '::bytea, '\\225\\002\\310`\\000F\\271w\\021\\342\\337\\350\\351\\004~`'::bytea, '\\225\\002\\310`\\000F\\271w\\021\\342\\351\\372\\250\\201\\366|'::bytea, '\\236\\036\\310`\\000F\\271w\\021\\344\\313\\320]''M\\261'::bytea, '\\245[1\\345~e\\355,C\\325\\003\\201\\230\\202O\\005'::bytea, '\\245\\303-VR\\177\\315 G\\373R\\033\\216\\230\\012\\217'::bytea, '\\254.\\310`\\000F\\271w\\021\\343\\026\\010\\256\\310*\\246'::bytea, '\\254.\\310`\\000F\\271w\\021\\343\\026\\010\\256\\310*\\260'::bytea, '\\254.\\310`\\000F\\271w\\021\\343\\026\\015\\316/\\374\\244'::bytea, '\\262\\310\\310`\\000F\\271w\\021\\344\\345\\011[Z]\\273'::bytea, '\\264|\\310`\\000F\\271w\\021\\344D\\2577F\\365\\252'::bytea, '\\264|\\310`\\000F\\271w\\021\\344[c\\325& \\231'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\331\\371'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\331\\376'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\332\\024'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\332\\026'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\332\\030'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\332\\032'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\332\\036'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\332 '::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\332"'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\332$'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\332&'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\332('::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\3324'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\3328'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sM\\006\\373H\\374'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sM\\006\\373I\\000'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sM\\006\\373I\\002'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sM\\006\\373I\\010'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sM\\006\\373I\\016'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sM\\006\\373I\\020'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sM\\006\\373I"'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sNO\\341\\035\\320'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sNO\\341\\035\\324'::bytea, '\\266\\011\\000\\032d6\\033\\360\\021\\341\\233L\\200\\342So'::bytea, '\\270-\\000\\032d6\\033\\360\\021\\341\\360\\335\\177#h\\327'::bytea, '\\270-\\000\\032d6\\033\\360\\021\\341\\370\\265{\\016\\225\\330'::bytea, '\\277\\317\\310`\\000F\\271w\\021\\343\\033\\261\\245D\\012\\330'::bytea, '\\277\\317\\310`\\000F\\271w\\021\\343!\\016P\\314\\232W'::bytea, '\\277\\317\\310`\\000F\\271w\\021\\343!\\016P\\314\\232\\\\'::bytea)))
+GROUP BY T5._Period,
+T5._RecorderTRef,
+T5._RecorderRRef,
+T5._Fld611RRef,
+T5._Fld613RRef,
+T5._Fld615RRef,
+T5._Fld617RRef,
+T5._Fld1290RRef
+HAVING (SUM(T5._Fld618)) <> CAST(0 AS NUMERIC)) T4
+WHERE (T4.RecorderTRef = '\\000\\000\\000'''::bytea)) T1
+GROUP BY T1.Q_001_F_000RRef,
+T1.Q_001_F_002RRef,
+T1.Q_001_F_003RRef,
+T1.Q_001_F_004RRef,
+T1.Q_001_F_005RRef,
+T1.Q_001_F_001RRef;
+
+--2026-01-29 14:43:00.930000,     duration:1996,     rowsaffected:0
+INSERT INTO pg_temp.Monitoring65 (_Q_001_F_000RRef, _Q_001_F_001RRef, _Q_001_F_002RRef, _Q_001_F_003RRef, _Q_001_F_004RRef, _Q_001_F_005) SELECT
+T1._Q_001_F_000RRef,
+T1._Q_001_F_001RRef,
+T1._Q_001_F_002RRef,
+T1._Q_001_F_003RRef,
+T1._Q_001_F_004RRef,
+SUM(T1._Q_001_F_006)
+FROM pg_temp.Monitoring64 T1
+LEFT OUTER JOIN _Document39 T2
+ON T1._Q_001_F_005RRef = T2._IDRRef
+LEFT OUTER JOIN _Reference32 T3
+ON T2._Fld410RRef = T3._IDRRef
+WHERE (T3._OwnerIDRRef = '\\226w\\254"\\013\\013\\317\\037\\021\\346\\022\\242b\\016\\036f'::bytea) AND (T3._Fld306 < CAST(2 AS NUMERIC)) OR (T2._Fld4880RRef = '\\226w\\254"\\013\\013\\317\\037\\021\\346\\022\\242b\\016\\036f'::bytea) AND (T2._Fld410RRef = '\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000'::bytea) AND (T2._Fld4879RRef <> '\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000'::bytea)
+GROUP BY T1._Q_001_F_000RRef,
+T1._Q_001_F_001RRef,
+T1._Q_001_F_002RRef,
+T1._Q_001_F_003RRef,
+T1._Q_001_F_004RRef;
+
+--2026-01-29 14:43:00.934000,     duration:997,     rowsaffected:0
+INSERT INTO pg_temp.Monitoring66 (_Q_001_F_000RRef, _Q_001_F_001RRef, _Q_001_F_002_TYPE, _Q_001_F_002_RTRef, _Q_001_F_002_RRRef, _Q_001_F_003_TYPE, _Q_001_F_003_RTRef, _Q_001_F_003_RRRef, _Q_001_F_004_TYPE, _Q_001_F_004_RTRef, _Q_001_F_004_RRRef, _Q_001_F_005) SELECT
+T1._Q_001_F_000RRef,
+T1._Q_001_F_001RRef,
+T1._Q_001_F_002_TYPE,
+T1._Q_001_F_002_RTRef,
+T1._Q_001_F_002_RRRef,
+T1._Q_001_F_003_TYPE,
+T1._Q_001_F_003_RTRef,
+T1._Q_001_F_003_RRRef,
+T1._Q_001_F_004_TYPE,
+T1._Q_001_F_004_RTRef,
+T1._Q_001_F_004_RRRef,
+SUM(T1._Q_001_F_006)
+FROM pg_temp.Monitoring63 T1
+GROUP BY T1._Q_001_F_000RRef,
+T1._Q_001_F_001RRef,
+T1._Q_001_F_002_TYPE,
+T1._Q_001_F_002_RTRef,
+T1._Q_001_F_002_RRRef,
+T1._Q_001_F_003_TYPE,
+T1._Q_001_F_003_RTRef,
+T1._Q_001_F_003_RRRef,
+T1._Q_001_F_004_TYPE,
+T1._Q_001_F_004_RTRef,
+T1._Q_001_F_004_RRRef;
+
+--2026-01-29 14:43:00.947000,     duration:4997,     rowsaffected:0
+INSERT INTO pg_temp.Monitoring68 (_Q_001_F_000RRef, _Q_001_F_001RRef, _Q_001_F_002_TYPE, _Q_001_F_002_RTRef, _Q_001_F_002_RRRef, _Q_001_F_003_TYPE, _Q_001_F_003_RTRef, _Q_001_F_003_RRRef, _Q_001_F_004_TYPE, _Q_001_F_004_RTRef, _Q_001_F_004_RRRef, _Q_001_F_005) SELECT
+COALESCE(T1.SDBL_DECOMP_1RRef,T1.SDBL_DECOMP_7RRef),
+COALESCE(T1.SDBL_DECOMP_2RRef,T1.SDBL_DECOMP_8RRef),
+CASE WHEN T1.SDBL_DECOMP_3_TYPE IS NULL THEN T1.SDBL_DECOMP_9_TYPE ELSE T1.SDBL_DECOMP_3_TYPE END,
+CASE WHEN T1.SDBL_DECOMP_3_TYPE IS NULL THEN T1.SDBL_DECOMP_9_RTRef ELSE T1.SDBL_DECOMP_3_RTRef END,
+CASE WHEN T1.SDBL_DECOMP_3_TYPE IS NULL THEN T1.SDBL_DECOMP_9_RRRef ELSE T1.SDBL_DECOMP_3_RRRef END,
+CASE WHEN T1.SDBL_DECOMP_4_TYPE IS NULL THEN T1.SDBL_DECOMP_10_TYPE ELSE T1.SDBL_DECOMP_4_TYPE END,
+CASE WHEN T1.SDBL_DECOMP_4_TYPE IS NULL THEN T1.SDBL_DECOMP_10_RTRef ELSE T1.SDBL_DECOMP_4_RTRef END,
+CASE WHEN T1.SDBL_DECOMP_4_TYPE IS NULL THEN T1.SDBL_DECOMP_10_RRRef ELSE T1.SDBL_DECOMP_4_RRRef END,
+CASE WHEN T1.SDBL_DECOMP_5_TYPE IS NULL THEN T1.SDBL_DECOMP_11_TYPE ELSE T1.SDBL_DECOMP_5_TYPE END,
+CASE WHEN T1.SDBL_DECOMP_5_TYPE IS NULL THEN T1.SDBL_DECOMP_11_RTRef ELSE T1.SDBL_DECOMP_5_RTRef END,
+CASE WHEN T1.SDBL_DECOMP_5_TYPE IS NULL THEN T1.SDBL_DECOMP_11_RRRef ELSE T1.SDBL_DECOMP_5_RRRef END,
+SUM((COALESCE(T1.SDBL_DECOMP_6_,CAST(0 AS NUMERIC)) - COALESCE(T1.SDBL_DECOMP_12_,CAST(0 AS NUMERIC))))
+FROM (SELECT
+T2._Q_000_F_000RRef AS SDBL_DECOMP_1RRef,
+T2._Q_000_F_004_TYPE AS SDBL_DECOMP_5_TYPE,
+T2._Q_000_F_004_RTRef AS SDBL_DECOMP_5_RTRef,
+T2._Q_000_F_004_RRRef AS SDBL_DECOMP_5_RRRef,
+T2._Q_000_F_001RRef AS SDBL_DECOMP_2RRef,
+T2._Q_000_F_003_TYPE AS SDBL_DECOMP_4_TYPE,
+T2._Q_000_F_003_RTRef AS SDBL_DECOMP_4_RTRef,
+T2._Q_000_F_003_RRRef AS SDBL_DECOMP_4_RRRef,
+T2._Q_000_F_002_TYPE AS SDBL_DECOMP_3_TYPE,
+T2._Q_000_F_002_RTRef AS SDBL_DECOMP_3_RTRef,
+T2._Q_000_F_002_RRRef AS SDBL_DECOMP_3_RRRef,
+T2._Q_000_F_005 AS SDBL_DECOMP_6_,
+T3._Q_001_F_003_TYPE AS SDBL_DECOMP_10_TYPE,
+T3._Q_001_F_003_RTRef AS SDBL_DECOMP_10_RTRef,
+T3._Q_001_F_003_RRRef AS SDBL_DECOMP_10_RRRef,
+T3._Q_001_F_000RRef AS SDBL_DECOMP_7RRef,
+T3._Q_001_F_002_TYPE AS SDBL_DECOMP_9_TYPE,
+T3._Q_001_F_002_RTRef AS SDBL_DECOMP_9_RTRef,
+T3._Q_001_F_002_RRRef AS SDBL_DECOMP_9_RRRef,
+T3._Q_001_F_005 AS SDBL_DECOMP_12_,
+T3._Q_001_F_004_TYPE AS SDBL_DECOMP_11_TYPE,
+T3._Q_001_F_004_RTRef AS SDBL_DECOMP_11_RTRef,
+T3._Q_001_F_004_RRRef AS SDBL_DECOMP_11_RRRef,
+T3._Q_001_F_001RRef AS SDBL_DECOMP_8RRef
+FROM pg_temp.Monitoring62 T2
+INNER JOIN pg_temp.Monitoring66 T3
+ON 1=1
+WHERE (T2._Q_000_F_000RRef = T3._Q_001_F_000RRef) AND (T2._Q_000_F_001RRef = T3._Q_001_F_001RRef) AND (T2._Q_000_F_002_TYPE = T3._Q_001_F_002_TYPE AND T2._Q_000_F_002_RTRef = T3._Q_001_F_002_RTRef AND T2._Q_000_F_002_RRRef = T3._Q_001_F_002_RRRef) AND (T2._Q_000_F_003_TYPE = T3._Q_001_F_003_TYPE AND T2._Q_000_F_003_RTRef = T3._Q_001_F_003_RTRef AND T2._Q_000_F_003_RRRef = T3._Q_001_F_003_RRRef) AND (T2._Q_000_F_004_TYPE = T3._Q_001_F_004_TYPE AND T2._Q_000_F_004_RTRef = T3._Q_001_F_004_RTRef AND T2._Q_000_F_004_RRRef = T3._Q_001_F_004_RRRef)
+UNION ALL SELECT
+CAST(NULL AS BYTEA),
+CAST(NULL AS BYTEA),
+CAST(NULL AS BYTEA),
+CAST(NULL AS BYTEA),
+CAST(NULL AS BYTEA),
+CAST(NULL AS BYTEA),
+CAST(NULL AS BYTEA),
+CAST(NULL AS BYTEA),
+CAST(NULL AS BYTEA),
+CAST(NULL AS BYTEA),
+CAST(NULL AS BYTEA),
+CAST(NULL AS NUMERIC),
+T4._Q_001_F_003_TYPE AS SDBL_DECOMP_10_TYPE,
+T4._Q_001_F_003_RTRef AS SDBL_DECOMP_10_RTRef,
+T4._Q_001_F_003_RRRef AS SDBL_DECOMP_10_RRRef,
+T4._Q_001_F_000RRef AS SDBL_DECOMP_7RRef,
+T4._Q_001_F_002_TYPE AS SDBL_DECOMP_9_TYPE,
+T4._Q_001_F_002_RTRef AS SDBL_DECOMP_9_RTRef,
+T4._Q_001_F_002_RRRef AS SDBL_DECOMP_9_RRRef,
+T4._Q_001_F_005 AS SDBL_DECOMP_12_,
+T4._Q_001_F_004_TYPE AS SDBL_DECOMP_11_TYPE,
+T4._Q_001_F_004_RTRef AS SDBL_DECOMP_11_RTRef,
+T4._Q_001_F_004_RRRef AS SDBL_DECOMP_11_RRRef,
+T4._Q_001_F_001RRef AS SDBL_DECOMP_8RRef
+FROM pg_temp.Monitoring66 T4
+WHERE NOT (EXISTS(SELECT
+1
+FROM pg_temp.Monitoring62 T5
+WHERE (T5._Q_000_F_000RRef = T4._Q_001_F_000RRef) AND (T5._Q_000_F_001RRef = T4._Q_001_F_001RRef) AND (T5._Q_000_F_002_TYPE = T4._Q_001_F_002_TYPE AND T5._Q_000_F_002_RTRef = T4._Q_001_F_002_RTRef AND T5._Q_000_F_002_RRRef = T4._Q_001_F_002_RRRef) AND (T5._Q_000_F_003_TYPE = T4._Q_001_F_003_TYPE AND T5._Q_000_F_003_RTRef = T4._Q_001_F_003_RTRef AND T5._Q_000_F_003_RRRef = T4._Q_001_F_003_RRRef) AND (T5._Q_000_F_004_TYPE = T4._Q_001_F_004_TYPE AND T5._Q_000_F_004_RTRef = T4._Q_001_F_004_RTRef AND T5._Q_000_F_004_RRRef = T4._Q_001_F_004_RRRef)))
+UNION ALL SELECT
+T6._Q_000_F_000RRef AS SDBL_DECOMP_1RRef,
+T6._Q_000_F_004_TYPE AS SDBL_DECOMP_5_TYPE,
+T6._Q_000_F_004_RTRef AS SDBL_DECOMP_5_RTRef,
+T6._Q_000_F_004_RRRef AS SDBL_DECOMP_5_RRRef,
+T6._Q_000_F_001RRef AS SDBL_DECOMP_2RRef,
+T6._Q_000_F_003_TYPE AS SDBL_DECOMP_4_TYPE,
+T6._Q_000_F_003_RTRef AS SDBL_DECOMP_4_RTRef,
+T6._Q_000_F_003_RRRef AS SDBL_DECOMP_4_RRRef,
+T6._Q_000_F_002_TYPE AS SDBL_DECOMP_3_TYPE,
+T6._Q_000_F_002_RTRef AS SDBL_DECOMP_3_RTRef,
+T6._Q_000_F_002_RRRef AS SDBL_DECOMP_3_RRRef,
+T6._Q_000_F_005 AS SDBL_DECOMP_6_,
+CAST(NULL AS BYTEA),
+CAST(NULL AS BYTEA),
+CAST(NULL AS BYTEA),
+CAST(NULL AS BYTEA),
+CAST(NULL AS BYTEA),
+CAST(NULL AS BYTEA),
+CAST(NULL AS BYTEA),
+CAST(NULL AS NUMERIC),
+CAST(NULL AS BYTEA),
+CAST(NULL AS BYTEA),
+CAST(NULL AS BYTEA),
+CAST(NULL AS BYTEA)
+FROM pg_temp.Monitoring62 T6
+WHERE NOT (EXISTS(SELECT
+1
+FROM pg_temp.Monitoring66 T7
+WHERE (T6._Q_000_F_000RRef = T7._Q_001_F_000RRef) AND (T6._Q_000_F_001RRef = T7._Q_001_F_001RRef) AND (T6._Q_000_F_002_TYPE = T7._Q_001_F_002_TYPE AND T6._Q_000_F_002_RTRef = T7._Q_001_F_002_RTRef AND T6._Q_000_F_002_RRRef = T7._Q_001_F_002_RRRef) AND (T6._Q_000_F_003_TYPE = T7._Q_001_F_003_TYPE AND T6._Q_000_F_003_RTRef = T7._Q_001_F_003_RTRef AND T6._Q_000_F_003_RRRef = T7._Q_001_F_003_RRRef) AND (T6._Q_000_F_004_TYPE = T7._Q_001_F_004_TYPE AND T6._Q_000_F_004_RTRef = T7._Q_001_F_004_RTRef AND T6._Q_000_F_004_RRRef = T7._Q_001_F_004_RRRef)))) T1
+GROUP BY COALESCE(T1.SDBL_DECOMP_1RRef,T1.SDBL_DECOMP_7RRef),
+COALESCE(T1.SDBL_DECOMP_2RRef,T1.SDBL_DECOMP_8RRef),
+CASE WHEN T1.SDBL_DECOMP_3_TYPE IS NULL THEN T1.SDBL_DECOMP_9_TYPE ELSE T1.SDBL_DECOMP_3_TYPE END,
+CASE WHEN T1.SDBL_DECOMP_3_TYPE IS NULL THEN T1.SDBL_DECOMP_9_RTRef ELSE T1.SDBL_DECOMP_3_RTRef END,
+CASE WHEN T1.SDBL_DECOMP_3_TYPE IS NULL THEN T1.SDBL_DECOMP_9_RRRef ELSE T1.SDBL_DECOMP_3_RRRef END,
+CASE WHEN T1.SDBL_DECOMP_4_TYPE IS NULL THEN T1.SDBL_DECOMP_10_TYPE ELSE T1.SDBL_DECOMP_4_TYPE END,
+CASE WHEN T1.SDBL_DECOMP_4_TYPE IS NULL THEN T1.SDBL_DECOMP_10_RTRef ELSE T1.SDBL_DECOMP_4_RTRef END,
+CASE WHEN T1.SDBL_DECOMP_4_TYPE IS NULL THEN T1.SDBL_DECOMP_10_RRRef ELSE T1.SDBL_DECOMP_4_RRRef END,
+CASE WHEN T1.SDBL_DECOMP_5_TYPE IS NULL THEN T1.SDBL_DECOMP_11_TYPE ELSE T1.SDBL_DECOMP_5_TYPE END,
+CASE WHEN T1.SDBL_DECOMP_5_TYPE IS NULL THEN T1.SDBL_DECOMP_11_RTRef ELSE T1.SDBL_DECOMP_5_RTRef END,
+CASE WHEN T1.SDBL_DECOMP_5_TYPE IS NULL THEN T1.SDBL_DECOMP_11_RRRef ELSE T1.SDBL_DECOMP_5_RRRef END;
+
+--2026-01-29 14:43:00.960000,     duration:4997,     rowsaffected:0
+INSERT INTO pg_temp.Monitoring67 (_Q_001_F_000RRef, _Q_001_F_001RRef, _Q_001_F_002_TYPE, _Q_001_F_002_RTRef, _Q_001_F_002_RRRef, _Q_001_F_003_TYPE, _Q_001_F_003_RTRef, _Q_001_F_003_RRRef, _Q_001_F_004_TYPE, _Q_001_F_004_RTRef, _Q_001_F_004_RRRef, _Q_001_F_005) SELECT
+COALESCE(T1.SDBL_DECOMP_1RRef,T1.SDBL_DECOMP_7RRef),
+COALESCE(T1.SDBL_DECOMP_2RRef,T1.SDBL_DECOMP_8RRef),
+CASE WHEN T1.SDBL_DECOMP_3_TYPE IS NULL THEN CASE WHEN T1.SDBL_DECOMP_9RRef IS NOT NULL THEN '\\010'::bytea END ELSE T1.SDBL_DECOMP_3_TYPE END,
+CASE WHEN T1.SDBL_DECOMP_3_TYPE IS NULL THEN CASE WHEN T1.SDBL_DECOMP_9RRef IS NOT NULL THEN '\\000\\000\\000\\024'::bytea END ELSE T1.SDBL_DECOMP_3_RTRef END,
+CASE WHEN T1.SDBL_DECOMP_3_TYPE IS NULL THEN T1.SDBL_DECOMP_9RRef ELSE T1.SDBL_DECOMP_3_RRRef END,
+CASE WHEN T1.SDBL_DECOMP_4_TYPE IS NULL THEN CASE WHEN T1.SDBL_DECOMP_10RRef IS NOT NULL THEN '\\010'::bytea END ELSE T1.SDBL_DECOMP_4_TYPE END,
+CASE WHEN T1.SDBL_DECOMP_4_TYPE IS NULL THEN CASE WHEN T1.SDBL_DECOMP_10RRef IS NOT NULL THEN '\\000\\000\\000\\027'::bytea END ELSE T1.SDBL_DECOMP_4_RTRef END,
+CASE WHEN T1.SDBL_DECOMP_4_TYPE IS NULL THEN T1.SDBL_DECOMP_10RRef ELSE T1.SDBL_DECOMP_4_RRRef END,
+CASE WHEN (CASE WHEN T1.SDBL_DECOMP_5_TYPE IS NULL THEN CASE WHEN T1.SDBL_DECOMP_11RRef IS NOT NULL THEN '\\010'::bytea END ELSE T1.SDBL_DECOMP_5_TYPE END = '\\001'::bytea) THEN '\\010'::bytea ELSE CASE WHEN T1.SDBL_DECOMP_5_TYPE IS NULL THEN CASE WHEN T1.SDBL_DECOMP_11RRef IS NOT NULL THEN '\\010'::bytea END ELSE T1.SDBL_DECOMP_5_TYPE END END,
+CASE WHEN (CASE WHEN T1.SDBL_DECOMP_5_TYPE IS NULL THEN CASE WHEN T1.SDBL_DECOMP_11RRef IS NOT NULL THEN '\\010'::bytea END ELSE T1.SDBL_DECOMP_5_TYPE END = '\\001'::bytea) THEN '\\000\\000\\000\\026'::bytea ELSE CASE WHEN T1.SDBL_DECOMP_5_TYPE IS NULL THEN CASE WHEN T1.SDBL_DECOMP_11RRef IS NOT NULL THEN '\\000\\000\\000\\026'::bytea END ELSE T1.SDBL_DECOMP_5_RTRef END END,
+CASE WHEN (CASE WHEN T1.SDBL_DECOMP_5_TYPE IS NULL THEN CASE WHEN T1.SDBL_DECOMP_11RRef IS NOT NULL THEN '\\010'::bytea END ELSE T1.SDBL_DECOMP_5_TYPE END = '\\001'::bytea) THEN '\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000'::bytea ELSE CASE WHEN T1.SDBL_DECOMP_5_TYPE IS NULL THEN T1.SDBL_DECOMP_11RRef ELSE T1.SDBL_DECOMP_5_RRRef END END,
+(CAST(CAST((SUM((COALESCE(T1.SDBL_DECOMP_6_,CAST(0 AS NUMERIC)) + COALESCE(T1.SDBL_DECOMP_12_,CAST(0 AS NUMERIC)))) * CAST(100 AS NUMERIC)) AS NUMERIC(38, 8)) / CAST(100 AS NUMERIC) AS NUMERIC(38, 8)))
+FROM (SELECT
+T2._Q_001_F_004_TYPE AS SDBL_DECOMP_5_TYPE,
+T2._Q_001_F_004_RTRef AS SDBL_DECOMP_5_RTRef,
+T2._Q_001_F_004_RRRef AS SDBL_DECOMP_5_RRRef,
+T2._Q_001_F_005 AS SDBL_DECOMP_6_,
+T2._Q_001_F_001RRef AS SDBL_DECOMP_2RRef,
+T2._Q_001_F_002_TYPE AS SDBL_DECOMP_3_TYPE,
+T2._Q_001_F_002_RTRef AS SDBL_DECOMP_3_RTRef,
+T2._Q_001_F_002_RRRef AS SDBL_DECOMP_3_RRRef,
+T2._Q_001_F_003_TYPE AS SDBL_DECOMP_4_TYPE,
+T2._Q_001_F_003_RTRef AS SDBL_DECOMP_4_RTRef,
+T2._Q_001_F_003_RRRef AS SDBL_DECOMP_4_RRRef,
+T2._Q_001_F_000RRef AS SDBL_DECOMP_1RRef,
+T3._Q_001_F_004RRef AS SDBL_DECOMP_11RRef,
+T3._Q_001_F_003RRef AS SDBL_DECOMP_10RRef,
+T3._Q_001_F_000RRef AS SDBL_DECOMP_7RRef,
+T3._Q_001_F_005 AS SDBL_DECOMP_12_,
+T3._Q_001_F_002RRef AS SDBL_DECOMP_9RRef,
+T3._Q_001_F_001RRef AS SDBL_DECOMP_8RRef
+FROM pg_temp.Monitoring68 T2
+INNER JOIN pg_temp.Monitoring65 T3
+ON 1=1
+WHERE (T2._Q_001_F_000RRef = T3._Q_001_F_000RRef) AND (T2._Q_001_F_001RRef = T3._Q_001_F_001RRef) AND (T2._Q_001_F_002_TYPE = '\\010'::bytea AND T2._Q_001_F_002_RTRef = '\\000\\000\\000\\024'::bytea AND T2._Q_001_F_002_RRRef = T3._Q_001_F_002RRef) AND (T2._Q_001_F_003_TYPE = '\\010'::bytea AND T2._Q_001_F_003_RTRef = '\\000\\000\\000\\027'::bytea AND T2._Q_001_F_003_RRRef = T3._Q_001_F_003RRef) AND (T2._Q_001_F_004_TYPE = '\\010'::bytea AND T2._Q_001_F_004_RTRef = '\\000\\000\\000\\026'::bytea AND T2._Q_001_F_004_RRRef = T3._Q_001_F_004RRef)
+UNION ALL SELECT
+CAST(NULL AS BYTEA),
+CAST(NULL AS BYTEA),
+CAST(NULL AS BYTEA),
+CAST(NULL AS NUMERIC),
+CAST(NULL AS BYTEA),
+CAST(NULL AS BYTEA),
+CAST(NULL AS BYTEA),
+CAST(NULL AS BYTEA),
+CAST(NULL AS BYTEA),
+CAST(NULL AS BYTEA),
+CAST(NULL AS BYTEA),
+CAST(NULL AS BYTEA),
+T4._Q_001_F_004RRef AS SDBL_DECOMP_11RRef,
+T4._Q_001_F_003RRef AS SDBL_DECOMP_10RRef,
+T4._Q_001_F_000RRef AS SDBL_DECOMP_7RRef,
+T4._Q_001_F_005 AS SDBL_DECOMP_12_,
+T4._Q_001_F_002RRef AS SDBL_DECOMP_9RRef,
+T4._Q_001_F_001RRef AS SDBL_DECOMP_8RRef
+FROM pg_temp.Monitoring65 T4
+WHERE NOT (EXISTS(SELECT
+1
+FROM pg_temp.Monitoring68 T5
+WHERE (T5._Q_001_F_000RRef = T4._Q_001_F_000RRef) AND (T5._Q_001_F_001RRef = T4._Q_001_F_001RRef) AND (T5._Q_001_F_002_TYPE = '\\010'::bytea AND T5._Q_001_F_002_RTRef = '\\000\\000\\000\\024'::bytea AND T5._Q_001_F_002_RRRef = T4._Q_001_F_002RRef) AND (T5._Q_001_F_003_TYPE = '\\010'::bytea AND T5._Q_001_F_003_RTRef = '\\000\\000\\000\\027'::bytea AND T5._Q_001_F_003_RRRef = T4._Q_001_F_003RRef) AND (T5._Q_001_F_004_TYPE = '\\010'::bytea AND T5._Q_001_F_004_RTRef = '\\000\\000\\000\\026'::bytea AND T5._Q_001_F_004_RRRef = T4._Q_001_F_004RRef)))
+UNION ALL SELECT
+T6._Q_001_F_004_TYPE AS SDBL_DECOMP_5_TYPE,
+T6._Q_001_F_004_RTRef AS SDBL_DECOMP_5_RTRef,
+T6._Q_001_F_004_RRRef AS SDBL_DECOMP_5_RRRef,
+T6._Q_001_F_005 AS SDBL_DECOMP_6_,
+T6._Q_001_F_001RRef AS SDBL_DECOMP_2RRef,
+T6._Q_001_F_002_TYPE AS SDBL_DECOMP_3_TYPE,
+T6._Q_001_F_002_RTRef AS SDBL_DECOMP_3_RTRef,
+T6._Q_001_F_002_RRRef AS SDBL_DECOMP_3_RRRef,
+T6._Q_001_F_003_TYPE AS SDBL_DECOMP_4_TYPE,
+T6._Q_001_F_003_RTRef AS SDBL_DECOMP_4_RTRef,
+T6._Q_001_F_003_RRRef AS SDBL_DECOMP_4_RRRef,
+T6._Q_001_F_000RRef AS SDBL_DECOMP_1RRef,
+CAST(NULL AS BYTEA),
+CAST(NULL AS BYTEA),
+CAST(NULL AS BYTEA),
+CAST(NULL AS NUMERIC),
+CAST(NULL AS BYTEA),
+CAST(NULL AS BYTEA)
+FROM pg_temp.Monitoring68 T6
+WHERE NOT (EXISTS(SELECT
+1
+FROM pg_temp.Monitoring65 T7
+WHERE (T6._Q_001_F_000RRef = T7._Q_001_F_000RRef) AND (T6._Q_001_F_001RRef = T7._Q_001_F_001RRef) AND (T6._Q_001_F_002_TYPE = '\\010'::bytea AND T6._Q_001_F_002_RTRef = '\\000\\000\\000\\024'::bytea AND T6._Q_001_F_002_RRRef = T7._Q_001_F_002RRef) AND (T6._Q_001_F_003_TYPE = '\\010'::bytea AND T6._Q_001_F_003_RTRef = '\\000\\000\\000\\027'::bytea AND T6._Q_001_F_003_RRRef = T7._Q_001_F_003RRef) AND (T6._Q_001_F_004_TYPE = '\\010'::bytea AND T6._Q_001_F_004_RTRef = '\\000\\000\\000\\026'::bytea AND T6._Q_001_F_004_RRRef = T7._Q_001_F_004RRef)))) T1
+WHERE ((COALESCE(T1.SDBL_DECOMP_6_,CAST(0 AS NUMERIC)) + COALESCE(T1.SDBL_DECOMP_12_,CAST(0 AS NUMERIC))) <> CAST(0 AS NUMERIC))
+GROUP BY COALESCE(T1.SDBL_DECOMP_1RRef,T1.SDBL_DECOMP_7RRef),
+COALESCE(T1.SDBL_DECOMP_2RRef,T1.SDBL_DECOMP_8RRef),
+CASE WHEN T1.SDBL_DECOMP_3_TYPE IS NULL THEN CASE WHEN T1.SDBL_DECOMP_9RRef IS NOT NULL THEN '\\010'::bytea END ELSE T1.SDBL_DECOMP_3_TYPE END,
+CASE WHEN T1.SDBL_DECOMP_3_TYPE IS NULL THEN CASE WHEN T1.SDBL_DECOMP_9RRef IS NOT NULL THEN '\\000\\000\\000\\024'::bytea END ELSE T1.SDBL_DECOMP_3_RTRef END,
+CASE WHEN T1.SDBL_DECOMP_3_TYPE IS NULL THEN T1.SDBL_DECOMP_9RRef ELSE T1.SDBL_DECOMP_3_RRRef END,
+CASE WHEN T1.SDBL_DECOMP_4_TYPE IS NULL THEN CASE WHEN T1.SDBL_DECOMP_10RRef IS NOT NULL THEN '\\010'::bytea END ELSE T1.SDBL_DECOMP_4_TYPE END,
+CASE WHEN T1.SDBL_DECOMP_4_TYPE IS NULL THEN CASE WHEN T1.SDBL_DECOMP_10RRef IS NOT NULL THEN '\\000\\000\\000\\027'::bytea END ELSE T1.SDBL_DECOMP_4_RTRef END,
+CASE WHEN T1.SDBL_DECOMP_4_TYPE IS NULL THEN T1.SDBL_DECOMP_10RRef ELSE T1.SDBL_DECOMP_4_RRRef END,
+CASE WHEN (CASE WHEN T1.SDBL_DECOMP_5_TYPE IS NULL THEN CASE WHEN T1.SDBL_DECOMP_11RRef IS NOT NULL THEN '\\010'::bytea END ELSE T1.SDBL_DECOMP_5_TYPE END = '\\001'::bytea) THEN '\\010'::bytea ELSE CASE WHEN T1.SDBL_DECOMP_5_TYPE IS NULL THEN CASE WHEN T1.SDBL_DECOMP_11RRef IS NOT NULL THEN '\\010'::bytea END ELSE T1.SDBL_DECOMP_5_TYPE END END,
+CASE WHEN (CASE WHEN T1.SDBL_DECOMP_5_TYPE IS NULL THEN CASE WHEN T1.SDBL_DECOMP_11RRef IS NOT NULL THEN '\\010'::bytea END ELSE T1.SDBL_DECOMP_5_TYPE END = '\\001'::bytea) THEN '\\000\\000\\000\\026'::bytea ELSE CASE WHEN T1.SDBL_DECOMP_5_TYPE IS NULL THEN CASE WHEN T1.SDBL_DECOMP_11RRef IS NOT NULL THEN '\\000\\000\\000\\026'::bytea END ELSE T1.SDBL_DECOMP_5_RTRef END END,
+CASE WHEN (CASE WHEN T1.SDBL_DECOMP_5_TYPE IS NULL THEN CASE WHEN T1.SDBL_DECOMP_11RRef IS NOT NULL THEN '\\010'::bytea END ELSE T1.SDBL_DECOMP_5_TYPE END = '\\001'::bytea) THEN '\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000\\000'::bytea ELSE CASE WHEN T1.SDBL_DECOMP_5_TYPE IS NULL THEN T1.SDBL_DECOMP_11RRef ELSE T1.SDBL_DECOMP_5_RRRef END END
+HAVING ((SUM((COALESCE(T1.SDBL_DECOMP_6_,CAST(0 AS NUMERIC)) + COALESCE(T1.SDBL_DECOMP_12_,CAST(0 AS NUMERIC)))) * CAST(100 AS NUMERIC)) <> CAST(0 AS NUMERIC));
+
+--2026-01-29 14:43:00.965005,     duration:2,     rowsaffected:0
+INSERT INTO pg_temp.Monitoring69 (_Q_001_F_000RRef, _Q_001_F_001RRef, _Q_001_F_002) SELECT
+T1._Q_001_F_000RRef,
+T1._Q_001_F_001RRef,
+SUM(T1._Q_001_F_005)
+FROM pg_temp.Monitoring67 T1
+GROUP BY T1._Q_001_F_000RRef,
+T1._Q_001_F_001RRef;
+
+--2026-01-29 14:43:00.972000,     duration:1998,     rowsaffected:0
+INSERT INTO pg_temp.Monitoring70 (_Q_001_F_000RRef, _Q_001_F_001RRef, _Q_001_F_002RRef, _Q_001_F_003) SELECT
+T1._IDRRef,
+T1._Fld411RRef,
+T1._Fld412RRef,
+T1._Fld1757
+FROM _Document39 T1
+WHERE (T1._Marked = FALSE) AND (T1._Fld411RRef = '\\237\\356Q\\375\\310\\2269\\377N}\\200\\026\\024\\205>\\370'::bytea) AND (T1._Fld410RRef = '\\226w\\254"\\013\\013\\317\\037\\021\\346\\022\\242b\\016\\036j'::bytea) AND (T1._Date_Time >= '2026-01-03 00:00:00'::timestamp) AND (T1._Date_Time <= '2026-01-03 23:59:59'::timestamp) AND (T1._Fld412RRef IN ('\\215&\\310`\\000F\\271w\\021\\343WnO\\224\\312]'::bytea, '\\215&\\310`\\000F\\271w\\021\\343^`\\364\\374\\370H'::bytea, '\\223\\312\\000\\032d6\\033\\360\\021\\341\\207\\266\\372\\2054 '::bytea, '\\225\\002\\310`\\000F\\271w\\021\\342\\337\\350\\351\\004~`'::bytea, '\\225\\002\\310`\\000F\\271w\\021\\342\\351\\372\\250\\201\\366|'::bytea, '\\236\\036\\310`\\000F\\271w\\021\\344\\313\\320]''M\\261'::bytea, '\\245[1\\345~e\\355,C\\325\\003\\201\\230\\202O\\005'::bytea, '\\245\\303-VR\\177\\315 G\\373R\\033\\216\\230\\012\\217'::bytea, '\\254.\\310`\\000F\\271w\\021\\343\\026\\010\\256\\310*\\246'::bytea, '\\254.\\310`\\000F\\271w\\021\\343\\026\\010\\256\\310*\\260'::bytea, '\\254.\\310`\\000F\\271w\\021\\343\\026\\015\\316/\\374\\244'::bytea, '\\262\\310\\310`\\000F\\271w\\021\\344\\345\\011[Z]\\273'::bytea, '\\264|\\310`\\000F\\271w\\021\\344D\\2577F\\365\\252'::bytea, '\\264|\\310`\\000F\\271w\\021\\344[c\\325& \\231'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\331\\371'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\331\\376'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\332\\024'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\332\\026'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\332\\030'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\332\\032'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\332\\036'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\332 '::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\332"'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\332$'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\332&'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\332('::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\3324'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sJ\\346\\312\\3328'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sM\\006\\373H\\374'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sM\\006\\373I\\000'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sM\\006\\373I\\002'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sM\\006\\373I\\010'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sM\\006\\373I\\016'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sM\\006\\373I\\020'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sM\\006\\373I"'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sNO\\341\\035\\320'::bytea, '\\265D\\000\\032d6\\033\\360\\021\\341sNO\\341\\035\\324'::bytea, '\\266\\011\\000\\032d6\\033\\360\\021\\341\\233L\\200\\342So'::bytea, '\\270-\\000\\032d6\\033\\360\\021\\341\\360\\335\\177#h\\327'::bytea, '\\270-\\000\\032d6\\033\\360\\021\\341\\370\\265{\\016\\225\\330'::bytea, '\\277\\317\\310`\\000F\\271w\\021\\343\\033\\261\\245D\\012\\330'::bytea, '\\277\\317\\310`\\000F\\271w\\021\\343!\\016P\\314\\232W'::bytea, '\\277\\317\\310`\\000F\\271w\\021\\343!\\016P\\314\\232\\\\'::bytea)) AND (T1._Fld725RRef = '\\277\\363\\0000HdB4\\021\\342NUS$h\\272'::bytea) AND (T1._Fld1757 = CAST(0 AS NUMERIC));
+
+
+SELECT
+T1._Q_001_F_000RRef,
+T1._Q_001_F_001RRef,
+T1._Q_001_F_002,
+T2._Q_001_F_000RRef
+FROM pg_temp.Monitoring69 T1
+LEFT OUTER JOIN pg_temp.Monitoring70 T2
+ON (T1._Q_001_F_000RRef = T2._Q_001_F_001RRef) AND (T1._Q_001_F_001RRef = T2._Q_001_F_002RRef)
+UNION ALL SELECT
+T3._Q_001_F_001RRef,
+T3._Q_001_F_002RRef,
+CAST(CAST(0 AS NUMERIC) AS NUMERIC(38, 8)),
+T3._Q_001_F_000RRef
+FROM pg_temp.Monitoring70 T3
+LEFT OUTER JOIN pg_temp.Monitoring69 T4
+ON (T4._Q_001_F_000RRef = T3._Q_001_F_001RRef) AND (T4._Q_001_F_001RRef = T3._Q_001_F_002RRef)
+WHERE (T4._Q_001_F_000RRef IS NULL);
+
+drop table if exists Monitoring62 cascade;
+
+drop table if exists Monitoring63 cascade;
+
+drop table if exists Monitoring64 cascade;
+
+drop table if exists Monitoring65 cascade;
+
+drop table if exists Monitoring66 cascade;
+
+drop table if exists Monitoring67 cascade;
+
+drop table if exists Monitoring68 cascade;
+
+drop table if exists Monitoring69 cascade;
+
+drop table if exists Monitoring70 cascade;

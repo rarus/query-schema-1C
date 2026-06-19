@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Просмотр SVG</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            background: #ffffff;
+            font-family: Arial, sans-serif;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        #svg-container {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            cursor: grab;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        #svg-container:active {
+            cursor: grabbing;
+        }
+
+        #svg-container svg {
+            width: 100%;
+            height: 100%;
+            transform-origin: 0 0;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        #svg-container svg * {
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        .controls {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            display: flex;
+            gap: 10px;
+            background: white;
+            padding: 8px 12px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            z-index: 100;
+            align-items: center;
+        }
+
+        .controls button, .controls label {
+            width: 32px;
+            height: 32px;
+            font-size: 16px;
+            border: none;
+            background: #007bff;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            margin: 0 3px;
+        }
+
+        .controls button.zoom-preset {
+            width: 32px;
+            font-size: 12px;
+        }
+
+        .controls input[type="file"] {
+            display: none;
+        }
+
+        .controls button:hover, .controls label:hover {
+            background: #0056b3;
+        }
+
+        .controls button:active {
+            background: #004085;
+        }
+
+        .zoom-level {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+        }
+
+        .zoom-level span {
+            min-width: 60px;
+            text-align: center;
+        }
+
+        .viewport-info {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: white;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            z-index: 100;
+            display: none;
+        }
+
+        .viewport-info.visible {
+            display: block;
+        }
+
+        #thumbnail-canvas {
+            border: 1px solid #ddd;
+            display: block;
+            cursor: pointer;
+        }
+
+        .svg-selected {
+            filter: drop-shadow(0 0 5px #ff0000) !important;
+        }
+
+        .svg-selected[fill]:not([fill="none"]) {
+            fill: #ff6b6b !important;
+        }
+
+        .svg-selected[stroke]:not([stroke="none"]):not(.line-element) {
+            stroke: #ff0000 !important;
+        }
+
+        .svg-selected.line-element {
+            stroke: #ff0000 !important;
+            stroke-width: 4px !important;
+        }
+    </style>
+</head>
+<body>
+    <div id="svg-container"></div>
+
+    <div class="viewport-info">
+        <canvas id="thumbnail-canvas" width="200" height="150"></canvas>
+    </div>
+
+    <div class="controls">
+        <input type="file" id="file-input" accept=".svg" style="display:none">
+        <button id="zoom-out">−</button>
+        <div class="zoom-level">
+            <span id="zoom-display">100%</span>
+        </div>
+        <button id="zoom-in">+</button>
+        <button class="zoom-preset" data-zoom="0.25">25</button>
+        <button class="zoom-preset" data-zoom="0.5">50</button>
+        <button class="zoom-preset" data-zoom="0.75">75</button>
+        <button id="zoom-reset">⟲</button>
+    </div>
+
+    <script>
+        const container = document.getElementById('svg-container');
+        const zoomInBtn = document.getElementById('zoom-in');
+        const zoomOutBtn = document.getElementById('zoom-out');
+        const zoomResetBtn = document.getElementById('zoom-reset');
+        const zoomDisplay = document.getElementById('zoom-display');
+        const thumbnailCanvas = document.getElementById('thumbnail-canvas');
+        const fileInput = document.getElementById('file-input');
+        const ctx = thumbnailCanvas.getContext('2d');
+        const viewportInfo = document.querySelector('.viewport-info');
+
+        let scale = 1;
+        let translateX = 0;
+        let translateY = 0;
+        let isDragging = false;
+        let hasDragged = false;
+        let justDragged = false;
+        let dragStartX, dragStartY;
+        let startX, startY;
+        let svgImage = null;
+        let svgWidth = 0;
+        let svgHeight = 0;
+        let selectedElement = null;
+
+        function loadSVG(svgContent) {
+            if (svgImage) {
+                svgImage = null;
+            }
+            
+            ctx.clearRect(0, 0, thumbnailCanvas.width, thumbnailCanvas.height);
+            
+            container.innerHTML = svgContent;
+            const svg = container.querySelector('svg');
+            if (svg) {
+                svg.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
+                
+                const viewBox = svg.viewBox.baseVal;
+                if (viewBox.width && viewBox.height) {
+                    svgWidth = viewBox.width;
+                    svgHeight = viewBox.height;
+                } else {
+                    svgWidth = parseInt(svg.getAttribute('width')) || 1000;
+                    svgHeight = parseInt(svg.getAttribute('height')) || 800;
+                }
+
+                const maxSize = 768;
+                let pngWidth = svgWidth;
+                let pngHeight = svgHeight;
+                const aspect = svgWidth / svgHeight;
+                
+                if (pngWidth > maxSize || pngHeight > maxSize) {
+                    if (aspect > 1) {
+                        pngWidth = maxSize;
+                        pngHeight = maxSize / aspect;
+                    } else {
+                        pngHeight = maxSize;
+                        pngWidth = maxSize * aspect;
+                    }
+                }
+
+                /*
+                const tempCanvas = document.createElement('canvas');
+                tempCanvas.width = pngWidth;
+                tempCanvas.height = pngHeight;
+                const tempCtx = tempCanvas.getContext('2d');
+                
+                const img = new Image();
+                const blob = new Blob([svgContent], { type: 'image/svg+xml' });
+                const url = URL.createObjectURL(blob);
+                
+                img.onload = () => {
+                    tempCtx.drawImage(img, 0, 0, pngWidth, pngHeight);
+                    URL.revokeObjectURL(url);
+                    
+                    const pngDataUrl = tempCanvas.toDataURL('image/png');
+                    
+                    svgImage = new Image();
+                    svgImage.onload = () => {
+                        setTimeout(updateThumbnail, 0);
+                    };
+                    svgImage.onerror = () => {
+                        setTimeout(updateThumbnail, 0);
+                    };
+                    svgImage.src = pngDataUrl;
+                };
+                img.src = url;
+                */
+
+                const svgDataUri = 'data:image/svg+xml;base64,' + btoa(unescape(encodeURIComponent(svgContent)));
+                
+                svgImage = new Image();
+                svgImage.onload = () => {
+                    setTimeout(updateThumbnail, 0);
+                };
+                svgImage.onerror = () => {
+                    setTimeout(updateThumbnail, 0);
+                };
+                svgImage.src = svgDataUri;
+                updateViewportInfo();
+
+                svg.querySelectorAll('*').forEach(el => {
+                    el.style.pointerEvents = 'all';
+                    el.addEventListener('click', handleSvgElementClick);
+                    el.style.cursor = 'pointer';
+                });
+
+                const scaleX = window.innerWidth / svgWidth;
+                const scaleY = window.innerHeight / svgHeight;
+                const fitScale = Math.min(scaleX, scaleY);
+                
+                if (fitScale < 1) {
+                    scale = Math.max(fitScale, 0.7);
+                    translateX = (window.innerWidth - svgWidth * scale) / 2;
+                    translateY = 20;
+                }
+
+                updateTransform();
+            }
+        }
+
+        function handleSvgElementClick(e) {
+            if (justDragged) {
+                justDragged = false;
+                return;
+            }
+            
+            const target = e.target;
+            const isExcludedElement = ['rect', 'text', 'tspan'].includes(target.tagName);
+            
+            if (isExcludedElement) {
+                return;
+            }
+            
+            const isLineElement = ['line', 'polyline', 'path'].includes(target.tagName);
+            
+            if (selectedElement) {
+                selectedElement.classList.remove('svg-selected', 'line-element');
+            }
+            
+            if (selectedElement === target) {
+                selectedElement = null;
+            } else {
+                selectedElement = target;
+                target.classList.add('svg-selected');
+                if (isLineElement) {
+                    target.classList.add('line-element');
+                }
+            }
+        }
+
+        function loadSVGFromFile(file) {
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                scale = 1;
+                translateX = 0;
+                translateY = 0;
+                if (selectedElement) {
+                    selectedElement.classList.remove('svg-selected', 'line-element');
+                    selectedElement = null;
+                }
+                loadSVG(e.target.result);
+            };
+            reader.readAsText(file);
+        }
+
+        function loadDefaultSVG() {
+            fetch('diagram.svg')
+                .then(response => response.text())
+                .then(svgContent => {
+                    loadSVG(svgContent);
+                })
+                .catch(err => {
+                    container.innerHTML = '<p style="text-align:center;margin-top:50px;">Для визуализации схемы запроса нажмите Сформировать</p>';
+                });
+        }
+
+        function updateTransform() {
+            const svg = container.querySelector('svg');
+            if (svg) {
+                svg.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
+            }
+            zoomDisplay.textContent = Math.round(scale * 100) + '%';
+            updateThumbnail();
+        }
+
+        function updateThumbnail() {
+            if (!svgImage || !svgImage.complete || !svgWidth || !svgHeight) return;
+
+            const canvas = thumbnailCanvas;
+            const canvasW = canvas.width;
+            const canvasH = canvas.height;
+
+            ctx.clearRect(0, 0, canvasW, canvasH);
+            
+            const scaledSvgWidth = svgWidth * scale;
+            const scaledSvgHeight = svgHeight * scale;
+            const viewportW = window.innerWidth;
+            const viewportH = window.innerHeight;
+
+            const isFullyVisible = scaledSvgWidth <= viewportW && scaledSvgHeight <= viewportH && translateX >= 0 && translateY >= 0;
+
+            if (isFullyVisible) {
+                viewportInfo.classList.remove('visible');
+                return;
+            }
+
+            viewportInfo.classList.add('visible');
+
+            ctx.clearRect(0, 0, canvasW, canvasH);
+            ctx.fillStyle = '#ffffff';
+            ctx.fillRect(0, 0, canvasW, canvasH);
+
+            const imgAspect = svgWidth / svgHeight;
+            const canvasAspect = canvasW / canvasH;
+
+            let drawWidth, drawHeight, drawX, drawY;
+            if (imgAspect > canvasAspect) {
+                drawWidth = canvasW;
+                drawHeight = canvasW / imgAspect;
+                drawX = 0;
+                drawY = (canvasH - drawHeight) / 2;
+            } else {
+                drawHeight = canvasH;
+                drawWidth = canvasH * imgAspect;
+                drawX = (canvasW - drawWidth) / 2;
+                drawY = 0;
+            }
+
+            ctx.drawImage(svgImage, drawX, drawY, drawWidth, drawHeight);
+
+            const scaleX = drawWidth / svgWidth;
+            const scaleY = drawHeight / svgHeight;
+
+            const viewX = -translateX / scale;
+            const viewY = -translateY / scale;
+            const viewW = window.innerWidth / scale;
+            const viewH = window.innerHeight / scale;
+
+            const rectX = drawX + viewX * scaleX;
+            const rectY = drawY + viewY * scaleY;
+            const rectW = viewW * scaleX;
+            const rectH = viewH * scaleY;
+
+            ctx.fillStyle = 'rgba(0, 123, 255, 0.3)';
+            ctx.fillRect(rectX, rectY, rectW, rectH);
+            
+            ctx.strokeStyle = '#007bff';
+            ctx.lineWidth = 2;
+            ctx.strokeRect(rectX, rectY, rectW, rectH);
+        }
+
+        function centerOnPosition(canvasX, canvasY) {
+            const canvasW = thumbnailCanvas.width;
+            const canvasH = thumbnailCanvas.height;
+            
+            const imgAspect = svgWidth / svgHeight;
+            const canvasAspect = canvasW / canvasH;
+            
+            let drawWidth, drawHeight, drawX, drawY;
+            if (imgAspect > canvasAspect) {
+                drawWidth = canvasW;
+                drawHeight = canvasW / imgAspect;
+                drawX = 0;
+                drawY = (canvasH - drawHeight) / 2;
+            } else {
+                drawHeight = canvasH;
+                drawWidth = canvasH * imgAspect;
+                drawX = (canvasW - drawWidth) / 2;
+                drawY = 0;
+            }
+
+            const scaleX = drawWidth / svgWidth;
+            const scaleY = drawHeight / svgHeight;
+
+            const svgX = (canvasX - drawX) / scaleX;
+            const svgY = (canvasY - drawY) / scaleY;
+
+            const viewportCenterX = window.innerWidth / 2;
+            const viewportCenterY = window.innerHeight / 2;
+
+            translateX = viewportCenterX - svgX * scale;
+            translateY = viewportCenterY - svgY * scale;
+
+            updateTransform();
+        }
+
+        let isDraggingThumbnail = false;
+        let thumbnailDragStartX, thumbnailDragStartY;
+
+        function updateViewFromThumbnail(canvasX, canvasY) {
+            const canvasW = thumbnailCanvas.width;
+            const canvasH = thumbnailCanvas.height;
+            
+            const imgAspect = svgWidth / svgHeight;
+            const canvasAspect = canvasW / canvasH;
+            
+            let drawWidth, drawHeight, drawX, drawY;
+            if (imgAspect > canvasAspect) {
+                drawWidth = canvasW;
+                drawHeight = canvasW / imgAspect;
+                drawX = 0;
+                drawY = (canvasH - drawHeight) / 2;
+            } else {
+                drawHeight = canvasH;
+                drawWidth = canvasH * imgAspect;
+                drawX = (canvasW - drawWidth) / 2;
+                drawY = 0;
+            }
+
+            const scaleX = drawWidth / svgWidth;
+            const scaleY = drawHeight / svgHeight;
+
+            const svgX = (canvasX - drawX) / scaleX;
+            const svgY = (canvasY - drawY) / scaleY;
+
+            translateX = window.innerWidth / 2 - svgX * scale;
+            translateY = window.innerHeight / 3 - svgY * scale;
+
+            updateTransform();
+        }
+
+        thumbnailCanvas.addEventListener('mousedown', (e) => {
+            isDraggingThumbnail = true;
+            const rect = thumbnailCanvas.getBoundingClientRect();
+            thumbnailDragStartX = e.clientX;
+            thumbnailDragStartY = e.clientY;
+            
+            const canvasX = e.clientX - rect.left;
+            const canvasY = e.clientY - rect.top;
+            updateViewFromThumbnail(canvasX, canvasY);
+        });
+
+        thumbnailCanvas.addEventListener('mousemove', (e) => {
+            if (!isDraggingThumbnail) return;
+            
+            const rect = thumbnailCanvas.getBoundingClientRect();
+            const canvasX = e.clientX - rect.left;
+            const canvasY = e.clientY - rect.top;
+            updateViewFromThumbnail(canvasX, canvasY);
+        });
+
+        thumbnailCanvas.addEventListener('mouseup', () => {
+            isDraggingThumbnail = false;
+        });
+
+        thumbnailCanvas.addEventListener('mouseleave', () => {
+            isDraggingThumbnail = false;
+        });
+
+        function updateViewportInfo() {
+            updateThumbnail();
+        }
+
+        function zoomBy(delta) {
+            const centerX = window.innerWidth / 2;
+            const centerY = window.innerHeight / 2;
+            
+            const svgCenterX = (centerX - translateX) / scale;
+            const svgCenterY = (centerY - translateY) / scale;
+            
+            scale *= delta;
+            
+            translateX = centerX - svgCenterX * scale;
+            translateY = centerY - svgCenterY * scale;
+            
+            updateTransform();
+        }
+
+        zoomInBtn.addEventListener('click', () => {
+            zoomBy(1.2);
+        });
+
+        zoomOutBtn.addEventListener('click', () => {
+            zoomBy(1 / 1.2);
+        });
+
+        document.querySelectorAll('.zoom-preset').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const newScale = parseFloat(btn.dataset.zoom);
+                const centerX = window.innerWidth / 2;
+                const centerY = window.innerHeight / 2;
+                
+                const svgCenterX = (centerX - translateX) / scale;
+                const svgCenterY = (centerY - translateY) / scale;
+                
+                scale = newScale;
+                
+                translateX = centerX - svgCenterX * scale;
+                translateY = centerY - svgCenterY * scale;
+                
+                updateTransform();
+            });
+        });
+
+        zoomResetBtn.addEventListener('click', () => {
+            scale = 1;
+            translateX = (window.innerWidth - svgWidth) / 2;
+            translateY = (window.innerHeight - svgHeight) / 2;
+            if (selectedElement) {
+                selectedElement.classList.remove('svg-selected', 'line-element');
+                selectedElement = null;
+            }
+            updateTransform();
+        });
+
+        function clearSelection() {
+            if (selectedElement) {
+                selectedElement.classList.remove('svg-selected', 'line-element');
+                selectedElement = null;
+            }
+        }
+
+        container.addEventListener('mousedown', (e) => {
+            e.preventDefault();
+            hasDragged = false;
+            justDragged = false;
+            dragStartX = e.clientX;
+            dragStartY = e.clientY;
+            isDragging = true;
+            startX = e.clientX - translateX;
+            startY = e.clientY - translateY;
+        });
+
+        container.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+            const dx = e.clientX - dragStartX;
+            const dy = e.clientY - dragStartY;
+            if (Math.abs(dx) > 5 || Math.abs(dy) > 5) {
+                hasDragged = true;
+                justDragged = true;
+            }
+            translateX = e.clientX - startX;
+            translateY = e.clientY - startY;
+            updateTransform();
+        });
+
+        container.addEventListener('mouseup', (e) => {
+            if (!hasDragged && (e.target === container || e.target.tagName === 'svg')) {
+                clearSelection();
+            }
+            isDragging = false;
+        });
+
+        container.addEventListener('mouseleave', () => {
+            isDragging = false;
+        });
+
+        container.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            const delta = e.deltaY > 0 ? 0.9 : 1.1;
+            zoomBy(delta);
+        });
+
+        window.addEventListener('resize', updateThumbnail);
+
+        fileInput.addEventListener('change', (e) => {
+            if (e.target.files.length > 0) {
+                loadSVGFromFile(e.target.files[0]);
+            }
+        });
+
+        window.LoadSVG_as_TEXT = function(svgText) {
+            scale = 1;
+            translateX = 0;
+            translateY = 0;
+            if (selectedElement) {
+                selectedElement.classList.remove('svg-selected', 'line-element');
+                selectedElement = null;
+            }
+            loadSVG(svgText);
+        };
+		
+    </script>
+</body>
+</html>
